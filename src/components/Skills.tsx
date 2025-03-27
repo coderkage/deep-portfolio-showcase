@@ -65,7 +65,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="section-container" id="skills-section">
+    <section id="skills" className="section-container">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
