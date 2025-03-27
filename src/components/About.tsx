@@ -9,7 +9,7 @@ export default function About() {
           <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
             About Me
           </span>
-          <h2 className="section-title">AI Engineer & Researcher</h2>
+          <h2 className="section-title">AI Engineer & <span className="gradient-text">Researcher</span></h2>
           <p className="section-subtitle mx-auto">
             Passionate about leveraging AI to solve complex problems and drive innovation in the field of Natural Language Processing.
           </p>
@@ -36,7 +36,7 @@ export default function About() {
               </div>
               
               <div className="flex items-start space-x-3">
-                <Award className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <Award className="w-5 h-5 text-accent shrink-0 mt-1" />
                 <div>
                   <h4 className="font-medium">GATE AIR 512</h4>
                   <p className="text-muted-foreground">Graduate Aptitude Test in Engineering</p>
@@ -56,7 +56,7 @@ export default function About() {
           {/* Right Side - Image and Stats */}
           <div className="relative animate-scale-in">
             <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-tr from-accent to-transparent opacity-30 mix-blend-overlay z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 opacity-50 mix-blend-overlay z-10"></div>
               <img
                 src="https://images.unsplash.com/photo-1679403766669-6ed8570311cd?auto=format&fit=crop&q=80"
                 alt="AI Research"
@@ -72,7 +72,7 @@ export default function About() {
                   <p className="text-sm text-muted-foreground">Years Experience</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-primary">10+</p>
+                  <p className="text-3xl font-bold text-accent">10+</p>
                   <p className="text-sm text-muted-foreground">Projects</p>
                 </div>
                 <div className="text-center">

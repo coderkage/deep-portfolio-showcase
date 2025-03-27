@@ -16,7 +16,7 @@ export default function Skills() {
       { threshold: 0.1 }
     );
     
-    const element = document.getElementById("skills-section");
+    const element = document.getElementById("skills");
     if (element) observer.observe(element);
     
     return () => {
@@ -71,7 +71,7 @@ export default function Skills() {
           <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
             Skills
           </span>
-          <h2 className="section-title">Technical Proficiencies</h2>
+          <h2 className="section-title">Technical <span className="gradient-text">Proficiencies</span></h2>
           <p className="section-subtitle mx-auto">
             A comprehensive overview of my technical skills and expertise in AI engineering, machine learning, and software development.
           </p>
@@ -79,8 +79,9 @@ export default function Skills() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={category.name} className="space-y-6 animate-fade-in" style={{ animationDelay: `${categoryIndex * 150}ms` }}>
-              <h3 className="text-xl font-medium mb-4">{category.name}</h3>
+            <div key={category.name} className="space-y-6 animate-fade-in highlight-card p-6 rounded-xl" 
+                 style={{ animationDelay: `${categoryIndex * 150}ms` }}>
+              <h3 className="text-xl font-medium mb-4 gradient-text">{category.name}</h3>
               
               <div className="space-y-5">
                 {category.skills.map((skill, index) => (
@@ -92,7 +93,7 @@ export default function Skills() {
                     
                     <div className="h-2 bg-muted rounded-full overflow-hidden">
                       <div 
-                        className="h-full bg-primary transition-all duration-1000 ease-out rounded-full"
+                        className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-1000 ease-out rounded-full"
                         style={{ 
                           width: isVisible ? `${skill.level}%` : '0%',
                           transitionDelay: `${(categoryIndex * 4 + index) * 100}ms`
@@ -108,7 +109,7 @@ export default function Skills() {
         
         {/* Additional skill highlights */}
         <div className="mt-20">
-          <h3 className="text-xl font-medium mb-8 text-center">Additional Expertise</h3>
+          <h3 className="text-xl font-medium mb-8 text-center gradient-text">Additional Expertise</h3>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {[
@@ -131,7 +132,7 @@ export default function Skills() {
             ].map((skill, index) => (
               <div 
                 key={skill}
-                className="glass py-3 px-4 rounded-lg text-center border border-border hover:border-primary/50 transition-all duration-300 animate-fade-in"
+                className="glass py-3 px-4 rounded-lg text-center border hover:border-primary/50 transition-all duration-300 animate-fade-in hover:shadow-md hover:shadow-primary/10"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {skill}
