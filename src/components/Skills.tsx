@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Brain, Code, Computer, Gear, Terminal, Flask } from "lucide-react";
+import { Brain, Code, Computer, Settings, Terminal, Beaker } from "lucide-react";
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,7 +63,7 @@ export default function Skills() {
     },
     {
       name: "DevOps & Infrastructure",
-      icon: Gear,
+      icon: Settings,
       skills: [
         "Kubernetes", "CI/CD Pipelines", "Cloud Computing", "Containerization"
       ],
@@ -71,7 +71,7 @@ export default function Skills() {
     },
     {
       name: "Research & Analysis",
-      icon: Flask,
+      icon: Beaker,
       skills: [
         "Sentiment Analysis", "Text Summarization", "Document AI", 
         "Classification", "ROUGE", "BLEU", "Disaster Management"
