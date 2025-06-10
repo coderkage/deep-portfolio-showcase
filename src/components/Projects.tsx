@@ -1,8 +1,11 @@
 
 import { ArrowRight, Github, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Projects() {
+  const [showMore, setShowMore] = useState(false);
+
   const projects = [
     {
       id: "rumbleradar",
@@ -39,6 +42,44 @@ export default function Projects() {
     }
   ];
 
+  const additionalProjects = [
+    {
+      id: "sentiment-analyzer",
+      title: "Sentiment Analyzer",
+      description: "Real-time sentiment analysis tool for social media monitoring and brand reputation management using transformer models and deep learning techniques.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
+      tags: ["Sentiment Analysis", "Social Media", "Deep Learning", "React", "FastAPI"],
+      links: {
+        github: "https://github.com/deeppatel234/sentiment-analyzer",
+        demo: "https://sentiment-ai.dev"
+      }
+    },
+    {
+      id: "document-qa",
+      title: "Document Q&A System",
+      description: "Intelligent document question-answering system that allows users to upload documents and ask questions about their content using advanced RAG techniques.",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80",
+      tags: ["RAG", "Document AI", "Vector Search", "LangChain", "Streamlit"],
+      links: {
+        github: "https://github.com/deeppatel234/document-qa",
+        demo: "https://docqa.ai"
+      }
+    },
+    {
+      id: "text-summarizer",
+      title: "Text Summarizer",
+      description: "Advanced text summarization tool using extractive and abstractive techniques to generate concise summaries from long-form content and research papers.",
+      image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&q=80",
+      tags: ["Text Summarization", "NLP", "Transformers", "ROUGE", "BLEU"],
+      links: {
+        github: "https://github.com/deeppatel234/text-summarizer",
+        demo: "https://summarize-ai.dev"
+      }
+    }
+  ];
+
+  const displayedProjects = showMore ? [...projects, ...additionalProjects] : projects;
+
   return (
     <section id="projects" className="section-container bg-accent/50">
       <div className="max-w-6xl mx-auto">
@@ -53,7 +94,7 @@ export default function Projects() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div 
               key={project.id}
               className="glass rounded-xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 hover:translate-y-[-4px] group animate-fade-in"
@@ -123,13 +164,21 @@ export default function Projects() {
         </div>
         
         <div className="text-center mt-12">
+          <button 
+            onClick={() => setShowMore(!showMore)}
+            className="glass px-6 py-3 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center space-x-2 mr-4"
+          >
+            <span>{showMore ? 'Show Less Projects' : 'View More Projects'}</span>
+            <ArrowRight className={`w-4 h-4 transition-transform ${showMore ? 'rotate-180' : ''}`} />
+          </button>
+          
           <a 
             href="https://github.com/deeppatel234"
             target="_blank"
             rel="noopener noreferrer"
             className="glass px-6 py-3 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center space-x-2"
           >
-            <span>View More Projects on GitHub</span>
+            <span>View on GitHub</span>
             <Github className="w-4 h-4" />
           </a>
         </div>
