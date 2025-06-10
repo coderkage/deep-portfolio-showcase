@@ -1,3 +1,4 @@
+
 import { GraduationCap, Award, Book } from "lucide-react";
 
 export default function About() {
@@ -6,25 +7,29 @@ export default function About() {
       name: "AWS Certified Solutions Architect",
       issuer: "Amazon Web Services",
       year: "2023",
-      credential: "SAA-C03"
+      credential: "SAA-C03",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400&h=300"
     },
     {
       name: "Google Cloud Professional ML Engineer",
       issuer: "Google Cloud",
       year: "2023",
-      credential: "PML-C01"
+      credential: "PML-C01",
+      image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=400&h=300"
     },
     {
       name: "TensorFlow Developer Certificate",
       issuer: "TensorFlow",
       year: "2022",
-      credential: "TF-DEV"
+      credential: "TF-DEV",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=400&h=300"
     },
     {
       name: "Microsoft Azure AI Engineer",
       issuer: "Microsoft",
       year: "2023",
-      credential: "AI-102"
+      credential: "AI-102",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400&h=300"
     }
   ];
 
@@ -81,7 +86,7 @@ export default function About() {
           
           {/* Right Side - Image and Stats */}
           <div className="relative animate-scale-in">
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl mb-8">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 opacity-50 mix-blend-overlay z-10"></div>
               <img
                 src="https://images.unsplash.com/photo-1679403766669-6ed8570311cd?auto=format&fit=crop&q=80"
@@ -90,21 +95,19 @@ export default function About() {
               />
             </div>
             
-            {/* Stats Overlay */}
-            <div className="absolute -bottom-8 -right-8 glass rounded-2xl p-6 shadow-lg backdrop-blur-lg w-3/4">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-primary">3+</p>
-                  <p className="text-sm text-muted-foreground">Years Experience</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-accent">10+</p>
-                  <p className="text-sm text-muted-foreground">Projects</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-primary">5+</p>
-                  <p className="text-sm text-muted-foreground">Publications</p>
-                </div>
+            {/* Stats Cards */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="glass rounded-xl p-4 text-center">
+                <p className="text-2xl font-bold text-primary">3+</p>
+                <p className="text-xs text-muted-foreground">Years Experience</p>
+              </div>
+              <div className="glass rounded-xl p-4 text-center">
+                <p className="text-2xl font-bold text-accent">10+</p>
+                <p className="text-xs text-muted-foreground">Projects</p>
+              </div>
+              <div className="glass rounded-xl p-4 text-center">
+                <p className="text-2xl font-bold text-primary">5+</p>
+                <p className="text-xs text-muted-foreground">Publications</p>
               </div>
             </div>
           </div>
@@ -126,31 +129,40 @@ export default function About() {
             {certifications.map((cert, index) => (
               <div 
                 key={cert.name}
-                className="glass rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300 group animate-fade-in"
+                className="glass rounded-xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 group animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h4 className="font-medium text-lg group-hover:text-primary transition-colors">
-                      {cert.name}
-                    </h4>
-                    <p className="text-muted-foreground text-sm">
-                      {cert.issuer}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-sm font-medium text-primary">
-                      {cert.year}
-                    </span>
-                  </div>
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={cert.image}
+                    alt={cert.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium text-primary">
-                    {cert.credential}
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
-                    <Award className="w-4 h-4 text-primary" />
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h4 className="font-medium text-lg group-hover:text-primary transition-colors">
+                        {cert.name}
+                      </h4>
+                      <p className="text-muted-foreground text-sm">
+                        {cert.issuer}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-sm font-medium text-primary">
+                        {cert.year}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium text-primary">
+                      {cert.credential}
+                    </span>
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
+                      <Award className="w-4 h-4 text-primary" />
+                    </div>
                   </div>
                 </div>
               </div>
