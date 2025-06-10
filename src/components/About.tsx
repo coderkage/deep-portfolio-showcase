@@ -1,5 +1,4 @@
-
-import { GraduationCap, Award, Book, Certificate } from "lucide-react";
+import { GraduationCap, Award, Book } from "lucide-react";
 
 export default function About() {
   const certifications = [
@@ -115,7 +114,7 @@ export default function About() {
         <div className="mt-20">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <Certificate className="w-6 h-6 text-primary mr-2" />
+              <Award className="w-6 h-6 text-primary mr-2" />
               <h3 className="text-2xl font-bold">Professional Certifications</h3>
             </div>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -151,7 +150,7 @@ export default function About() {
                     {cert.credential}
                   </span>
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
-                    <Certificate className="w-4 h-4 text-primary" />
+                    <Award className="w-4 h-4 text-primary" />
                   </div>
                 </div>
               </div>
