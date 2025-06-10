@@ -1,7 +1,34 @@
 
-import { GraduationCap, Award, Book } from "lucide-react";
+import { GraduationCap, Award, Book, Certificate } from "lucide-react";
 
 export default function About() {
+  const certifications = [
+    {
+      name: "AWS Certified Solutions Architect",
+      issuer: "Amazon Web Services",
+      year: "2023",
+      credential: "SAA-C03"
+    },
+    {
+      name: "Google Cloud Professional ML Engineer",
+      issuer: "Google Cloud",
+      year: "2023",
+      credential: "PML-C01"
+    },
+    {
+      name: "TensorFlow Developer Certificate",
+      issuer: "TensorFlow",
+      year: "2022",
+      credential: "TF-DEV"
+    },
+    {
+      name: "Microsoft Azure AI Engineer",
+      issuer: "Microsoft",
+      year: "2023",
+      credential: "AI-102"
+    }
+  ];
+
   return (
     <section id="about" className="section-container">
       <div className="max-w-4xl mx-auto">
@@ -81,6 +108,54 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Certifications Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-4">
+              <Certificate className="w-6 h-6 text-primary mr-2" />
+              <h3 className="text-2xl font-bold">Professional Certifications</h3>
+            </div>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Validated expertise across leading cloud platforms and AI technologies, demonstrating commitment to continuous learning and industry best practices.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {certifications.map((cert, index) => (
+              <div 
+                key={cert.name}
+                className="glass rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300 group animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h4 className="font-medium text-lg group-hover:text-primary transition-colors">
+                      {cert.name}
+                    </h4>
+                    <p className="text-muted-foreground text-sm">
+                      {cert.issuer}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-sm font-medium text-primary">
+                      {cert.year}
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium text-primary">
+                    {cert.credential}
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
+                    <Certificate className="w-4 h-4 text-primary" />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
