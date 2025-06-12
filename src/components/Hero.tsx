@@ -30,10 +30,12 @@ export default function Hero() {
             
             <div className="flex gap-4 pt-2">
               <a 
-                href="#contact" 
+                href="/DeepPatel_Resume.pdf"
+                target="_blank"
+                download 
                 className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 px-6 py-3 rounded-md font-medium transition-all transform hover:translate-y-[-2px]"
               >
-                Get in Touch
+                Download Resume
               </a>
               <a 
                 href="#projects" 
@@ -67,7 +69,7 @@ export default function Hero() {
             <div className="aspect-square rounded-3xl overflow-hidden border-4 border-background relative z-10">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/20 opacity-60 mix-blend-overlay z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80"
+                src="/hero.jpg"
                 alt="Deep Patel"
                 className="w-full h-full object-cover"
               />
