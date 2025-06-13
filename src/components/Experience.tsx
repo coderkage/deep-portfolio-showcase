@@ -1,5 +1,5 @@
 
-import { CalendarDays, Navigation, MapPin, Building } from "lucide-react";
+import { CalendarDays, Navigation, MapPin, Building, ExternalLink } from "lucide-react";
 
 export default function Experience() {
   return (
@@ -17,37 +17,42 @@ export default function Experience() {
         
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border transform md:translate-x-px"></div>
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-primary to-primary/50"></div>
           
           {/* Experience Items */}
-          <div className="space-y-12">
+          <div className="space-y-8">
             {/* Tarutium Global Consulting */}
-            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 md:gap-y-0">
-              {/* Date for large screens (right side of odd items) */}
-              <div className="hidden md:flex md:order-1 justify-start">
-                <div className="glass px-6 py-3 rounded-full inline-flex items-center space-x-2">
+            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Timeline dot */}
+              <div className="absolute left-4 md:left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 shadow-lg border-2 border-background">
+                <div className="absolute inset-1 bg-primary/30 rounded-full animate-pulse"></div>
+              </div>
+              
+              {/* Date for large screens */}
+              <div className="hidden md:flex md:order-1 justify-start items-center">
+                <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20">
                   <CalendarDays className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium">May 2023 - August 2023</span>
                 </div>
               </div>
               
-              {/* Content for large screens (left side of odd items) */}
+              {/* Content */}
               <div className="md:order-0 group">
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-6 w-5 h-5 bg-background border-2 border-primary rounded-full transform -translate-x-1/2 z-10"></div>
-                
-                <div className="ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border group-hover:border-primary/50 transition-all duration-300 animate-fade-in">
-                  <div className="flex items-start mb-4">
-                    <div className="mr-4 bg-accent/80 rounded-full p-2.5">
-                      <Building className="w-6 h-6 text-primary" />
+                <div className="ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-primary/10 rounded-lg p-2">
+                        <Building className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">R&D Intern</h3>
+                        <p className="text-muted-foreground">Tarutium Global Consulting</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-medium">R&D Intern</h3>
-                      <p className="text-muted-foreground">Tarutium Global Consulting</p>
-                    </div>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
                   
-                  <div className="flex items-center mt-4 mb-4 space-x-4">
+                  <div className="flex items-center space-x-4 mb-4">
                     <div className="flex items-center text-sm text-muted-foreground">
                       <MapPin className="w-4 h-4 mr-1" />
                       <span>Remote</span>
@@ -60,56 +65,69 @@ export default function Experience() {
                     </div>
                   </div>
                   
-                  <div className="space-y-3 mt-6">
-                    <p>
+                  <div className="space-y-3">
+                    <p className="text-muted-foreground">
                       Built an end-to-end NLP pipeline for real-time disaster response applications, enabling more efficient emergency management systems.
                     </p>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                      <li>Implemented efficient data processing pipelines using Python and PyTorch</li>
-                      <li>Optimized large language models for specialized disaster-related text analysis</li>
-                      <li>Architected scalable ML infrastructure for real-time data processing</li>
-                      <li>Designed and documented API interfaces for system integration</li>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Implemented efficient data processing pipelines using Python and PyTorch
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Optimized large language models for specialized disaster-related text analysis
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Architected scalable ML infrastructure for real-time data processing
+                      </li>
                     </ul>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 mt-6">
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">Python</span>
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">PyTorch</span>
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">NLP</span>
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">Flask</span>
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">ML Ops</span>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {["Python", "PyTorch", "NLP", "Flask", "ML Ops"].map((tech) => (
+                      <span key={tech} className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
             
             {/* Research Assistant */}
-            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 md:gap-y-0">
-              {/* Date for large screens (left side of even items) */}
-              <div className="hidden md:flex md:order-0 justify-end">
-                <div className="glass px-6 py-3 rounded-full inline-flex items-center space-x-2">
+            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Timeline dot */}
+              <div className="absolute left-4 md:left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 shadow-lg border-2 border-background">
+                <div className="absolute inset-1 bg-primary/30 rounded-full animate-pulse"></div>
+              </div>
+              
+              {/* Date for large screens */}
+              <div className="hidden md:flex md:order-0 justify-end items-center">
+                <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20">
                   <CalendarDays className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium">Jan 2023 - May 2023</span>
                 </div>
               </div>
               
-              {/* Content for large screens (right side of even items) */}
+              {/* Content */}
               <div className="md:order-1 group">
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-6 w-5 h-5 bg-background border-2 border-primary rounded-full transform -translate-x-1/2 z-10"></div>
-                
-                <div className="ml-8 md:ml-8 md:mr-0 p-6 rounded-xl glass border border-border group-hover:border-primary/50 transition-all duration-300 animate-fade-in">
-                  <div className="flex items-start mb-4">
-                    <div className="mr-4 bg-accent/80 rounded-full p-2.5">
-                      <Navigation className="w-6 h-6 text-primary" />
+                <div className="ml-8 md:ml-8 md:mr-0 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-accent/20 rounded-lg p-2">
+                        <Navigation className="w-5 h-5 text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">Research Assistant</h3>
+                        <p className="text-muted-foreground">IIIT Raichur</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-medium">Research Assistant</h3>
-                      <p className="text-muted-foreground">IIIT Raichur</p>
-                    </div>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
                   </div>
                   
-                  <div className="flex items-center mt-4 mb-4 space-x-4">
+                  <div className="flex items-center space-x-4 mb-4">
                     <div className="flex items-center text-sm text-muted-foreground">
                       <MapPin className="w-4 h-4 mr-1" />
                       <span>Raichur, India</span>
@@ -122,23 +140,32 @@ export default function Experience() {
                     </div>
                   </div>
                   
-                  <div className="space-y-3 mt-6">
-                    <p>
+                  <div className="space-y-3">
+                    <p className="text-muted-foreground">
                       Conducted research on AI-powered systems for disaster management, focusing on earthquake response analysis using machine learning.
                     </p>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                      <li>Collected and preprocessed multimodal data from various earthquake events</li>
-                      <li>Developed novel algorithms for risk assessment and emergency response</li>
-                      <li>Published research findings in international conference (ACIIDS 2025)</li>
-                      <li>Collaborated with interdisciplinary teams of scientists and engineers</li>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Collected and preprocessed multimodal data from various earthquake events
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Developed novel algorithms for risk assessment and emergency response
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Published research findings in international conference (ACIIDS 2025)
+                      </li>
                     </ul>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 mt-6">
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">Research</span>
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">Machine Learning</span>
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">Data Analysis</span>
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">TensorFlow</span>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {["Research", "Machine Learning", "Data Analysis", "TensorFlow"].map((tech) => (
+                      <span key={tech} className="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs font-medium">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>

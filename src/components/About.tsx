@@ -86,105 +86,105 @@ export default function About() {
           
           {/* Right Side - Image and Stats */}
           <div className="relative animate-scale-in group">
-  {/* Scattered Images Layout */}
-  <div className="relative h-96 mb-12">
-    {/* Image 1 - Top Left */}
-    <div className="absolute top-0 left-0 w-48 h-36 transform -rotate-3 hover:rotate-0 transition-transform duration-500 hover:scale-105 hover:z-20">
-      <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 rounded-2xl opacity-20 blur-sm animate-pulse"></div>
-      <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
-        <img
-          src="/hero.jpg"
-          alt="AI Research 1"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-    
-    {/* Image 2 - Top Right */}
-    <div className="absolute top-4 right-4 w-44 h-32 transform rotate-6 hover:rotate-2 transition-transform duration-500 hover:scale-105 hover:z-20">
-      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '1s'}}></div>
-      <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
-        <img
-          src="/hero.jpg"
-          alt="AI Research 2"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-    
-    {/* Image 3 - Bottom Left */}
-    <div className="absolute bottom-4 left-8 w-40 h-30 transform rotate-2 hover:-rotate-1 transition-transform duration-500 hover:scale-105 hover:z-20">
-      <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '2s'}}></div>
-      <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
-        <img
-          src="/hero.jpg"
-          alt="AI Research 3"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-    
-    {/* Image 4 - Bottom Right */}
-    <div className="absolute bottom-8 right-8 w-40 h-30 transform rotate-2 hover:-rotate-1 transition-transform duration-500 hover:scale-105 hover:z-20">
-      <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '3s'}}></div>
-      <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
-        <img
-          src="/hero.jpg"
-          alt="AI Research 4"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-    
-    {/* Floating particles scattered around */}
-    <div className="absolute top-20 left-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '0s'}}></div>
-    <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-50 animate-bounce" style={{animationDelay: '1.5s'}}></div>
-    <div className="absolute bottom-32 left-1/2 w-1 h-1 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '3s'}}></div>
-    <div className="absolute top-1/3 left-1/2 w-1.5 h-1.5 bg-teal-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '4s'}}></div>
-  </div>
-  
-  {/* Enhanced Stats Cards */}
-  <div className="grid grid-cols-3 gap-6">
-    {/* Card 1 */}
-    <div className="group relative">
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
-      <div className="relative glass rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 border border-white/10">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full animate-pulse"></div>
-        </div>
-        <p className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-1">3+</p>
-        <p className="text-sm text-muted-foreground font-medium">YoE</p>
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500/20 to-transparent rounded-b-2xl"></div>
-      </div>
-    </div>
-    
-    {/* Card 2 */}
-    <div className="group relative">
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
-      <div className="relative glass rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 border border-white/10">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-600 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-        </div>
-        <p className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent mb-1">10+</p>
-        <p className="text-sm text-muted-foreground font-medium">Projects</p>
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500/20 to-transparent rounded-b-2xl"></div>
-      </div>
-    </div>
-    
-    {/* Card 3 */}
-    <div className="group relative">
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
-      <div className="relative glass rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 border border-white/10">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-teal-600 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-        </div>
-        <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-teal-600 bg-clip-text text-transparent mb-1">5+</p>
-        <p className="text-sm text-muted-foreground font-medium">Publications</p>
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500/20 to-transparent rounded-b-2xl"></div>
-      </div>
-    </div>
-  </div>
-</div>
+            {/* Scattered Images Layout */}
+            <div className="relative h-96 mb-12">
+              {/* Image 1 - Top Left */}
+              <div className="absolute top-0 left-0 w-48 h-36 transform -rotate-3 hover:rotate-0 transition-transform duration-500 hover:scale-105 hover:z-20">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 rounded-2xl opacity-20 blur-sm animate-pulse"></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
+                  <img
+                    src="/hero.jpg"
+                    alt="AI Research 1"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Image 2 - Top Right */}
+              <div className="absolute top-4 right-4 w-44 h-32 transform rotate-6 hover:rotate-2 transition-transform duration-500 hover:scale-105 hover:z-20">
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '1s'}}></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
+                  <img
+                    src="/hero.jpg"
+                    alt="AI Research 2"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Image 3 - Bottom Left */}
+              <div className="absolute bottom-4 left-8 w-40 h-30 transform rotate-2 hover:-rotate-1 transition-transform duration-500 hover:scale-105 hover:z-20">
+                <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '2s'}}></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
+                  <img
+                    src="/hero.jpg"
+                    alt="AI Research 3"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Image 4 - Bottom Right */}
+              <div className="absolute bottom-8 right-8 w-40 h-30 transform rotate-2 hover:-rotate-1 transition-transform duration-500 hover:scale-105 hover:z-20">
+                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '3s'}}></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
+                  <img
+                    src="/hero.jpg"
+                    alt="AI Research 4"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Floating particles scattered around */}
+              <div className="absolute top-20 left-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '0s'}}></div>
+              <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-50 animate-bounce" style={{animationDelay: '1.5s'}}></div>
+              <div className="absolute bottom-32 left-1/2 w-1 h-1 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '3s'}}></div>
+              <div className="absolute top-1/3 left-1/2 w-1.5 h-1.5 bg-teal-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '4s'}}></div>
+            </div>
+            
+            {/* Enhanced Stats Cards */}
+            <div className="grid grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
+                <div className="relative glass rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 border border-white/10">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full animate-pulse"></div>
+                  </div>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-1">3+</p>
+                  <p className="text-sm text-muted-foreground font-medium">YoE</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500/20 to-transparent rounded-b-2xl"></div>
+                </div>
+              </div>
+              
+              {/* Card 2 */}
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
+                <div className="relative glass rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 border border-white/10">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-600 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                  </div>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent mb-1">10+</p>
+                  <p className="text-sm text-muted-foreground font-medium">Projects</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500/20 to-transparent rounded-b-2xl"></div>
+                </div>
+              </div>
+              
+              {/* Card 3 */}
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
+                <div className="relative glass rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-1 border border-white/10">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-teal-600 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                  </div>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-teal-600 bg-clip-text text-transparent mb-1">5+</p>
+                  <p className="text-sm text-muted-foreground font-medium">Publications</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500/20 to-transparent rounded-b-2xl"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
         {/* Certifications Section */}
@@ -199,7 +199,7 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {certifications.map((cert, index) => (
               <div 
                 key={cert.name}
@@ -213,30 +213,21 @@ export default function About() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h4 className="font-medium text-lg group-hover:text-primary transition-colors">
-                        {cert.name}
-                      </h4>
-                      <p className="text-muted-foreground text-sm">
-                        {cert.issuer}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-sm font-medium text-primary">
-                        {cert.year}
-                      </span>
-                    </div>
-                  </div>
+                <div className="p-4">
+                  <h4 className="font-medium text-sm group-hover:text-primary transition-colors mb-1 line-clamp-2">
+                    {cert.name}
+                  </h4>
+                  <p className="text-muted-foreground text-xs mb-2">
+                    {cert.issuer}
+                  </p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium text-primary">
+                    <span className="px-2 py-1 bg-primary/10 rounded-full text-xs font-medium text-primary">
                       {cert.credential}
                     </span>
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center">
-                      <Award className="w-4 h-4 text-primary" />
-                    </div>
+                    <span className="text-xs font-medium text-primary">
+                      {cert.year}
+                    </span>
                   </div>
                 </div>
               </div>
