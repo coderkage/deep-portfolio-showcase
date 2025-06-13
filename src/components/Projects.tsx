@@ -214,8 +214,8 @@ export default function Projects() {
       id: 'all',
       label: 'All',
       icon: Layers,
-      projects: [...nlpLlmProjects.slice(0, 2), ...computerVisionProjects.slice(0, 2), ...dataScienceProjects.slice(0, 1), ...webDevProjects.slice(0, 2)],
-      additionalProjects: [...nlpLlmProjects.slice(2), ...computerVisionProjects.slice(2), ...dataScienceProjects.slice(1), ...webDevProjects.slice(2), ...quantumProjects, ...miscellaneousProjects]
+      projects: [...nlpLlmProjects.slice(0, 2), ...computerVisionProjects.slice(0, 2), ...dataScienceProjects.slice(0, 1), ...webDevProjects.slice(0, 1)],
+      additionalProjects: [...nlpLlmProjects.slice(2), ...computerVisionProjects.slice(2), ...dataScienceProjects.slice(1), ...webDevProjects.slice(1), ...quantumProjects, ...miscellaneousProjects]
     },
     {
       id: 'nlp-llm',
@@ -262,7 +262,13 @@ export default function Projects() {
   ];
 
   const renderProjectGrid = (projects: any[], additionalProjects: any[], categoryId: string) => {
-    const displayedProjects = showMore[categoryId] ? [...projects, ...additionalProjects] : projects;
+    // For categories with more than 6 projects, split them
+    const hasMoreThanSix = projects.length > 6;
+    const initialProjects = hasMoreThanSix ? projects.slice(0, 6) : projects;
+    const remainingProjects = hasMoreThanSix ? projects.slice(6) : [];
+    const allAdditionalProjects = [...remainingProjects, ...additionalProjects];
+    
+    const displayedProjects = showMore[categoryId] ? [...initialProjects, ...allAdditionalProjects] : initialProjects;
     
     return (
       <>
@@ -336,7 +342,7 @@ export default function Projects() {
           ))}
         </div>
         
-        {additionalProjects.length > 0 && (
+        {allAdditionalProjects.length > 0 && (
           <div className="text-center mt-12">
             <button 
               onClick={() => setShowMore(prev => ({ ...prev, [categoryId]: !prev[categoryId] }))}
