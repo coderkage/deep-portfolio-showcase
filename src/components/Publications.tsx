@@ -14,7 +14,8 @@ export default function Publications() {
         { type: "GitHub", url: "#", icon: Github },
         { type: "PDF", url: "#", icon: FileText }
       ],
-      isPeerReviewed: true
+      isPeerReviewed: true,
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
     },
     {
       title: "Physics-Informed Neural Networks for Quantum System Simulation",
@@ -26,7 +27,8 @@ export default function Publications() {
       links: [
         { type: "GitHub", url: "#", icon: Github }
       ],
-      isPeerReviewed: false
+      isPeerReviewed: false,
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
     },
     {
       title: "Subword-Aware Neural Machine Translation for English-French Language Pairs",
@@ -38,7 +40,8 @@ export default function Publications() {
       links: [
         { type: "GitHub", url: "#", icon: Github }
       ],
-      isPeerReviewed: false
+      isPeerReviewed: false,
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop"
     },
     {
       title: "Hybrid Image Compression: Comparative Analysis of Classical and Deep Learning Approaches",
@@ -50,7 +53,8 @@ export default function Publications() {
       links: [
         { type: "GitHub", url: "#", icon: Github }
       ],
-      isPeerReviewed: false
+      isPeerReviewed: false,
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
     },
     {
       title: "RAG-Enhanced LLM System for Automated YouTube Content Summarization",
@@ -62,14 +66,15 @@ export default function Publications() {
       links: [
         { type: "GitHub", url: "#", icon: Github }
       ],
-      isPeerReviewed: false
+      isPeerReviewed: false,
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
     }
   ];
 
   return (
     <section id="publications" className="section-container">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
           <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
             Publications
           </span>
@@ -79,28 +84,32 @@ export default function Publications() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-4">
           {publications.map((pub, index) => (
-            <div key={index} className="glass p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 group animate-fade-in">
-              <div className="flex flex-wrap md:flex-nowrap items-start gap-6">
-                {/* Icon */}
-                <div className="bg-accent/80 rounded-xl p-4 shrink-0">
-                  <FileText className="w-8 h-8 text-primary" />
+            <div key={index} className="glass p-4 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 group animate-fade-in">
+              <div className="flex gap-4 items-start">
+                {/* Image */}
+                <div className="w-24 h-18 rounded-lg overflow-hidden shrink-0 bg-gradient-to-br from-primary/10 to-accent/10">
+                  <img
+                    src={pub.image}
+                    alt={pub.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 
                 {/* Content */}
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   {/* Header */}
-                  <div className="mb-3">
-                    <h3 className="text-xl font-medium mb-2 group-hover:text-primary transition-colors duration-200">
+                  <div className="mb-2">
+                    <h3 className="text-lg font-medium mb-1 group-hover:text-primary transition-colors duration-200 line-clamp-2">
                       {pub.title}
                     </h3>
-                    <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap gap-x-3 gap-y-1 text-sm text-muted-foreground">
                       <span className="font-medium">
                         {pub.type} — {pub.venue} ({pub.year})
                       </span>
                       {pub.isPeerReviewed && (
-                        <span className="px-2 py-1 bg-primary/10 rounded text-primary text-xs font-medium">
+                        <span className="px-2 py-0.5 bg-primary/10 rounded text-primary text-xs font-medium">
                           Peer-Reviewed
                         </span>
                       )}
@@ -108,31 +117,39 @@ export default function Publications() {
                   </div>
                   
                   {/* Description */}
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed line-clamp-2">
                     {pub.description}
                   </p>
                   
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {pub.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  {/* Links */}
-                  <div className="flex flex-wrap gap-4">
-                    {pub.links.map((link, linkIndex) => (
-                      <a 
-                        key={linkIndex}
-                        href={link.url} 
-                        className="inline-flex items-center text-sm font-medium text-primary hover:underline transition-colors"
-                      >
-                        <link.icon className="w-4 h-4 mr-1.5" />
-                        <span>{link.type}</span>
-                      </a>
-                    ))}
+                  {/* Tags and Links Row */}
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-1">
+                      {pub.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span key={tagIndex} className="px-2 py-0.5 bg-primary/10 rounded-full text-xs font-medium">
+                          {tag}
+                        </span>
+                      ))}
+                      {pub.tags.length > 3 && (
+                        <span className="px-2 py-0.5 bg-muted rounded-full text-xs font-medium text-muted-foreground">
+                          +{pub.tags.length - 3}
+                        </span>
+                      )}
+                    </div>
+                    
+                    {/* Links */}
+                    <div className="flex gap-3">
+                      {pub.links.map((link, linkIndex) => (
+                        <a 
+                          key={linkIndex}
+                          href={link.url} 
+                          className="inline-flex items-center text-sm font-medium text-primary hover:underline transition-colors"
+                        >
+                          <link.icon className="w-3.5 h-3.5 mr-1" />
+                          <span>{link.type}</span>
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -140,7 +157,7 @@ export default function Publications() {
           ))}
           
           {/* Footer note */}
-          <div className="text-center mt-8">
+          <div className="text-center mt-6">
             <p className="text-muted-foreground text-sm">
               Additional research papers and publications are currently under development and review.
             </p>
