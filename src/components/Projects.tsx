@@ -1,4 +1,3 @@
-
 import { ArrowRight, Github, ExternalLink, Brain, Code, Database, Globe, Eye, Atom, Layers } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -17,194 +16,172 @@ export default function Projects() {
 
   const nlpLlmProjects = [
     {
-      id: "llm-from-scratch",
-      title: "LLM from Scratch",
-      description: "Building a Large Language Model from scratch using PyTorch, implementing transformer architecture with attention mechanisms and training on custom datasets.",
+      id: "rumbleradar",
+      title: "RumbleRadar",
+      description: "Advanced sentiment analysis system for real-time monitoring and analysis of social media content using natural language processing techniques.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80",
-      tags: ["PyTorch", "Transformers", "NLP", "Deep Learning", "Python"],
+      tags: ["NLP", "Sentiment Analysis", "Python", "Machine Learning", "Social Media"],
       links: {
-        github: "https://github.com/coderkage/llm-from-scratch",
-        demo: "https://llm-demo.dev"
+        github: "https://github.com/coderkage/RumbleRadar",
+        demo: "https://github.com/coderkage/RumbleRadar"
       }
     },
     {
-      id: "chatbot-ai",
-      title: "AI Chatbot",
-      description: "Intelligent conversational AI system with natural language understanding, context awareness, and multi-turn dialogue capabilities.",
+      id: "delta",
+      title: "DELTA",
+      description: "Deep learning framework for advanced text analysis and language understanding with transformer-based architecture.",
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80",
-      tags: ["NLP", "Chatbot", "AI", "Python", "API"],
+      tags: ["Deep Learning", "NLP", "Transformers", "Python", "PyTorch"],
       links: {
-        github: "https://github.com/coderkage/chatbot-ai",
-        demo: "https://chatbot-ai.dev"
+        github: "https://github.com/coderkage/DELTA",
+        demo: "https://github.com/coderkage/DELTA"
       }
     },
     {
-      id: "sentiment-analysis",
-      title: "Sentiment Analysis Tool",
-      description: "Real-time sentiment analysis system for social media monitoring using transformer models and advanced NLP techniques.",
+      id: "osakabot",
+      title: "Osakabot",
+      description: "Intelligent conversational AI chatbot with natural language understanding and context-aware responses.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
-      tags: ["Sentiment Analysis", "NLP", "Machine Learning", "Python", "API"],
+      tags: ["Chatbot", "AI", "NLP", "Conversational AI", "Python"],
       links: {
-        github: "https://github.com/coderkage/sentiment-analysis",
-        demo: "https://sentiment-ai.dev"
+        github: "https://github.com/coderkage/Osakabot",
+        demo: "https://github.com/coderkage/Osakabot"
       }
     }
   ];
 
   const computerVisionProjects = [
     {
-      id: "object-detection",
-      title: "Real-time Object Detection",
-      description: "YOLO-based object detection system for real-time identification and tracking of objects in video streams with high accuracy.",
-      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&q=80",
-      tags: ["Computer Vision", "YOLO", "OpenCV", "PyTorch", "Real-time"],
-      links: {
-        github: "https://github.com/coderkage/object-detection",
-        demo: "https://vision-ai.dev"
-      }
-    },
-    {
       id: "face-recognition",
-      title: "Face Recognition System",
-      description: "Advanced facial recognition system with liveness detection and anti-spoofing capabilities for secure authentication.",
+      title: "Face Recognition",
+      description: "Advanced facial recognition system with high accuracy detection and identification capabilities using computer vision techniques.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
-      tags: ["Face Recognition", "Computer Vision", "Security", "Python", "OpenCV"],
+      tags: ["Face Recognition", "Computer Vision", "OpenCV", "Python", "Machine Learning"],
       links: {
-        github: "https://github.com/coderkage/face-recognition",
-        demo: "https://face-auth.dev"
+        github: "https://github.com/coderkage/Face-Recognition",
+        demo: "https://github.com/coderkage/Face-Recognition"
       }
     },
     {
-      id: "image-classifier",
-      title: "Image Classification Model",
-      description: "Deep learning model for image classification with transfer learning using pre-trained networks and custom datasets.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&q=80",
-      tags: ["Image Classification", "Transfer Learning", "CNN", "TensorFlow", "Python"],
+      id: "webcam-filters",
+      title: "Webcam Filters",
+      description: "Real-time webcam filter application with various visual effects and image processing capabilities.",
+      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&q=80",
+      tags: ["Computer Vision", "OpenCV", "Real-time", "Image Processing", "Python"],
       links: {
-        github: "https://github.com/coderkage/image-classifier",
-        demo: "https://classify-ai.dev"
+        github: "https://github.com/coderkage/Webcam-Filters",
+        demo: "https://github.com/coderkage/Webcam-Filters"
       }
     }
   ];
 
   const dataScienceProjects = [
     {
-      id: "data-analysis-toolkit",
-      title: "Data Analysis Toolkit",
-      description: "Comprehensive data analysis and visualization toolkit with automated insights generation and statistical analysis capabilities.",
+      id: "pyclassify",
+      title: "PyClassify",
+      description: "Python-based classification toolkit for machine learning with multiple algorithms and data preprocessing capabilities.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
-      tags: ["Data Analysis", "Pandas", "Visualization", "Statistics", "Python"],
+      tags: ["Machine Learning", "Classification", "Python", "Data Science", "Scikit-learn"],
       links: {
-        github: "https://github.com/coderkage/data-analysis-toolkit",
-        demo: "https://data-toolkit.dev"
+        github: "https://github.com/coderkage/PyClassify",
+        demo: "https://github.com/coderkage/PyClassify"
       }
     },
     {
-      id: "predictive-model",
-      title: "Predictive Analytics Model",
-      description: "Machine learning model for predictive analytics with feature engineering, model selection, and performance optimization.",
-      image: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?auto=format&fit=crop&q=80",
-      tags: ["Predictive Analytics", "Machine Learning", "Feature Engineering", "Scikit-learn", "Python"],
+      id: "qrclassify",
+      title: "QRClassify",
+      description: "QR code classification and analysis system with advanced pattern recognition and data extraction capabilities.",
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&q=80",
+      tags: ["QR Code", "Classification", "Computer Vision", "Python", "Pattern Recognition"],
       links: {
-        github: "https://github.com/coderkage/predictive-model",
-        demo: "https://predict-ai.dev"
+        github: "https://github.com/coderkage/QRClassify",
+        demo: "https://github.com/coderkage/QRClassify"
       }
     }
   ];
 
   const webDevProjects = [
     {
-      id: "portfolio-website",
-      title: "Personal Portfolio",
-      description: "Modern, responsive portfolio website built with React and TypeScript, featuring smooth animations and a clean design system.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80",
-      tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      links: {
-        github: "https://github.com/coderkage/portfolio",
-        demo: "https://coderkage.dev"
-      }
-    },
-    {
-      id: "fullstack-app",
-      title: "Full-Stack Web Application",
-      description: "Complete web application with authentication, database integration, and RESTful API using modern web technologies.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80",
-      tags: ["React", "Node.js", "MongoDB", "Express", "JWT"],
-      links: {
-        github: "https://github.com/coderkage/fullstack-app",
-        demo: "https://webapp.dev"
-      }
-    },
-    {
-      id: "ecommerce-platform",
-      title: "E-commerce Platform",
-      description: "Feature-rich e-commerce platform with payment integration, inventory management, and admin dashboard.",
+      id: "mess-management",
+      title: "Mess Management",
+      description: "Comprehensive mess management system for hostels and cafeterias with meal planning, inventory, and billing features.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80",
-      tags: ["React", "Stripe", "PostgreSQL", "Docker", "AWS"],
+      tags: ["Web Development", "Management System", "Full-stack", "Database", "React"],
       links: {
-        github: "https://github.com/coderkage/ecommerce",
-        demo: "https://shop-platform.dev"
+        github: "https://github.com/coderkage/Mess-Management",
+        demo: "https://github.com/coderkage/Mess-Management"
+      }
+    },
+    {
+      id: "mrcf-website",
+      title: "MRCF Website",
+      description: "Official website for MRCF organization with modern design, responsive layout, and content management features.",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80",
+      tags: ["Web Development", "React", "Responsive Design", "Frontend", "UI/UX"],
+      links: {
+        github: "https://github.com/coderkage/MRCF-Website",
+        demo: "https://github.com/coderkage/MRCF-Website"
+      }
+    },
+    {
+      id: "track-75",
+      title: "Track 75",
+      description: "Progress tracking application for personal goals and milestones with analytics and visualization features.",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80",
+      tags: ["Web App", "Progress Tracking", "Analytics", "React", "Data Visualization"],
+      links: {
+        github: "https://github.com/coderkage/Track-75",
+        demo: "https://github.com/coderkage/Track-75"
       }
     }
   ];
 
   const quantumProjects = [
     {
-      id: "quantum-simulator",
-      title: "Quantum Circuit Simulator",
-      description: "Quantum computing simulator for designing and testing quantum circuits with visualization of quantum states and operations.",
+      id: "hybrid-qnn",
+      title: "Hybrid QNN",
+      description: "Hybrid Quantum Neural Network implementation combining classical and quantum computing approaches for enhanced machine learning.",
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80",
-      tags: ["Quantum Computing", "Qiskit", "Python", "Simulation", "Visualization"],
+      tags: ["Quantum Computing", "Neural Networks", "Hybrid Systems", "Qiskit", "Machine Learning"],
       links: {
-        github: "https://github.com/coderkage/quantum-simulator",
-        demo: "https://quantum-sim.dev"
+        github: "https://github.com/coderkage/Hybrid-QNN",
+        demo: "https://github.com/coderkage/Hybrid-QNN"
       }
     },
     {
-      id: "quantum-algorithms",
-      title: "Quantum Algorithms Implementation",
-      description: "Implementation of various quantum algorithms including Shor's algorithm, Grover's search, and quantum machine learning algorithms.",
+      id: "circuits-algorithms",
+      title: "Circuits and Algorithms",
+      description: "Implementation of various quantum circuits and algorithms including fundamental quantum computing principles and operations.",
       image: "https://images.unsplash.com/photo-1636953056323-9c09fdd74fa6?auto=format&fit=crop&q=80",
-      tags: ["Quantum Algorithms", "Qiskit", "Python", "Research", "Implementation"],
+      tags: ["Quantum Circuits", "Quantum Algorithms", "Qiskit", "Python", "Research"],
       links: {
-        github: "https://github.com/coderkage/quantum-algorithms",
-        demo: "https://quantum-algos.dev"
+        github: "https://github.com/coderkage/Circuits-and-Algorithms",
+        demo: "https://github.com/coderkage/Circuits-and-Algorithms"
       }
     }
   ];
 
   const miscellaneousProjects = [
     {
-      id: "automation-scripts",
-      title: "Automation Scripts Collection",
-      description: "Collection of Python automation scripts for various tasks including file management, web scraping, and system administration.",
+      id: "myneta-webscraper",
+      title: "MyNeta WebScraper",
+      description: "Web scraping tool for extracting political candidate information and electoral data from MyNeta platform.",
       image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80",
-      tags: ["Python", "Automation", "Scripting", "Web Scraping", "System Admin"],
+      tags: ["Web Scraping", "Python", "Data Extraction", "Political Data", "Automation"],
       links: {
-        github: "https://github.com/coderkage/automation-scripts",
-        demo: "https://auto-scripts.dev"
+        github: "https://github.com/coderkage/MyNeta-WebScraper",
+        demo: "https://github.com/coderkage/MyNeta-WebScraper"
       }
     },
     {
-      id: "api-gateway",
-      title: "Microservices API Gateway",
-      description: "Scalable API gateway for microservices architecture with rate limiting, authentication, and load balancing capabilities.",
+      id: "lossy-image-compression",
+      title: "Lossy Image Compression (JPEG)",
+      description: "Implementation of JPEG compression algorithm for lossy image compression with customizable quality settings.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80",
-      tags: ["Microservices", "API Gateway", "Node.js", "Docker", "Kubernetes"],
+      tags: ["Image Compression", "JPEG", "Algorithm Implementation", "Python", "Digital Signal Processing"],
       links: {
-        github: "https://github.com/coderkage/api-gateway",
-        demo: "https://gateway-api.dev"
-      }
-    },
-    {
-      id: "blockchain-app",
-      title: "Blockchain Application",
-      description: "Decentralized application built on Ethereum with smart contracts for secure and transparent transactions.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80",
-      tags: ["Blockchain", "Ethereum", "Smart Contracts", "Solidity", "Web3"],
-      links: {
-        github: "https://github.com/coderkage/blockchain-app",
-        demo: "https://dapp.dev"
+        github: "https://github.com/coderkage/Lossy-Image-Compression-JPEG",
+        demo: "https://github.com/coderkage/Lossy-Image-Compression-JPEG"
       }
     }
   ];
@@ -214,8 +191,8 @@ export default function Projects() {
       id: 'all',
       label: 'All',
       icon: Layers,
-      projects: [...nlpLlmProjects.slice(0, 2), ...computerVisionProjects.slice(0, 2), ...dataScienceProjects.slice(0, 1), ...webDevProjects.slice(0, 1)],
-      additionalProjects: [...nlpLlmProjects.slice(2), ...computerVisionProjects.slice(2), ...dataScienceProjects.slice(1), ...webDevProjects.slice(1), ...quantumProjects, ...miscellaneousProjects]
+      projects: [...nlpLlmProjects.slice(0, 2), ...computerVisionProjects.slice(0, 1), ...dataScienceProjects.slice(0, 1), ...webDevProjects.slice(0, 2)],
+      additionalProjects: [...nlpLlmProjects.slice(2), ...computerVisionProjects.slice(1), ...dataScienceProjects.slice(1), ...webDevProjects.slice(2), ...quantumProjects, ...miscellaneousProjects]
     },
     {
       id: 'nlp-llm',
