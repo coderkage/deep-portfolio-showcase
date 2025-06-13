@@ -14,13 +14,13 @@ export default function Projects() {
     'miscellaneous': false
   });
 
-  const nlpLlmProjects = [
+const nlpLlmProjects = [
     {
       id: "rumbleradar",
       title: "RumbleRadar",
-      description: "Advanced sentiment analysis system for real-time monitoring and analysis of social media content using natural language processing techniques.",
+      description: "Suite of Natural Language Processing (NLP) methodologies designed for earthquake response analysis leveraging Twitter data with sentiment analysis, location extraction, and topic modeling.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80",
-      tags: ["NLP", "Sentiment Analysis", "Python", "Machine Learning", "Social Media"],
+      tags: ["NLP", "Earthquake Analysis", "Python", "Twitter API", "Sentiment Analysis", "Location Extraction", "Topic Modeling", "Disaster Response"],
       links: {
         github: "https://github.com/coderkage/RumbleRadar",
         demo: "https://github.com/coderkage/RumbleRadar"
@@ -29,23 +29,23 @@ export default function Projects() {
     {
       id: "delta",
       title: "DELTA",
-      description: "Deep learning framework for advanced text analysis and language understanding with transformer-based architecture.",
+      description: "DeepSeek framework for Event-based Location Tracking and Analysis using advanced machine learning techniques for spatial-temporal data processing.",
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80",
-      tags: ["Deep Learning", "NLP", "Transformers", "Python", "PyTorch"],
+      tags: ["Deep Learning", "Location Tracking", "Event Analysis", "Python", "Spatial Data", "Machine Learning"],
       links: {
-        github: "https://github.com/coderkage/DELTA",
-        demo: "https://github.com/coderkage/DELTA"
+        github: "https://github.com/coderkage/DELTA-DeepSeek-for-Event-based-Location-Tracking-and-Analysis",
+        demo: "https://github.com/coderkage/DELTA-DeepSeek-for-Event-based-Location-Tracking-and-Analysis"
       }
     },
     {
       id: "osakabot",
-      title: "Osakabot",
-      description: "Intelligent conversational AI chatbot with natural language understanding and context-aware responses.",
+      title: "OsakaBot",
+      description: "Chatbot implementation of Osaka character from the slice-of-life anime 'Azumanga Daioh' with personality-driven conversational AI responses.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
-      tags: ["Chatbot", "AI", "NLP", "Conversational AI", "Python"],
+      tags: ["Chatbot", "Character AI", "Python", "Anime", "Conversational AI", "NLP"],
       links: {
-        github: "https://github.com/coderkage/Osakabot",
-        demo: "https://github.com/coderkage/Osakabot"
+        github: "https://github.com/coderkage/OsakaBot",
+        demo: "https://github.com/coderkage/OsakaBot"
       }
     }
   ];
@@ -58,19 +58,19 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
       tags: ["Face Recognition", "Computer Vision", "OpenCV", "Python", "Machine Learning"],
       links: {
-        github: "https://github.com/coderkage/Face-Recognition",
-        demo: "https://github.com/coderkage/Face-Recognition"
+        github: "https://www.youtube.com/watch?v=dQw4w9WgXq6",
+        demo: "https://www.youtube.com/watch?v=dQw4w9WgXq6"
       }
     },
     {
       id: "webcam-filters",
-      title: "Webcam Filters",
-      description: "Real-time webcam filter application with various visual effects and image processing capabilities.",
+      title: "Webcam Artistic Filters",
+      description: "Creative webcam filters with the functionality of edge contour detection using the Canny edge detector and various artistic effects using OpenCV.",
       image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&q=80",
-      tags: ["Computer Vision", "OpenCV", "Real-time", "Image Processing", "Python"],
+      tags: ["Computer Vision", "OpenCV", "Canny Edge Detection", "Real-time Filters", "Python", "Jupyter Notebook"],
       links: {
-        github: "https://github.com/coderkage/Webcam-Filters",
-        demo: "https://github.com/coderkage/Webcam-Filters"
+        github: "https://github.com/coderkage/webcam-artistic-filters",
+        demo: "https://github.com/coderkage/webcam-artistic-filters"
       }
     }
   ];
@@ -78,24 +78,24 @@ export default function Projects() {
   const dataScienceProjects = [
     {
       id: "pyclassify",
-      title: "PyClassify",
-      description: "Python-based classification toolkit for machine learning with multiple algorithms and data preprocessing capabilities.",
+      title: "pyClassify",
+      description: "Automated machine learning-based tool for classification problems with multiple algorithms and streamlined workflow for data preprocessing and model evaluation.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
-      tags: ["Machine Learning", "Classification", "Python", "Data Science", "Scikit-learn"],
+      tags: ["Machine Learning", "Classification", "Python", "Automated ML", "Data Science", "Model Evaluation"],
       links: {
-        github: "https://github.com/coderkage/PyClassify",
-        demo: "https://github.com/coderkage/PyClassify"
+        github: "https://github.com/coderkage/pyClassify",
+        demo: "https://github.com/coderkage/pyClassify"
       }
     },
     {
       id: "qrclassify",
-      title: "QRClassify",
-      description: "QR code classification and analysis system with advanced pattern recognition and data extraction capabilities.",
+      title: "QR Code Counterfeit Detection",
+      description: "Advanced system for QR code counterfeit detection and analysis using machine learning techniques for pattern recognition and authenticity verification.",
       image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&q=80",
-      tags: ["QR Code", "Classification", "Computer Vision", "Python", "Pattern Recognition"],
+      tags: ["QR Code", "Counterfeit Detection", "Computer Vision", "Python", "Security", "Pattern Recognition", "Jupyter Notebook"],
       links: {
-        github: "https://github.com/coderkage/QRClassify",
-        demo: "https://github.com/coderkage/QRClassify"
+        github: "https://github.com/coderkage/QRCode-Counterfeit-Detection",
+        demo: "https://github.com/coderkage/QRCode-Counterfeit-Detection"
       }
     }
   ];
@@ -103,13 +103,13 @@ export default function Projects() {
   const webDevProjects = [
     {
       id: "mess-management",
-      title: "Mess Management",
-      description: "Comprehensive mess management system for hostels and cafeterias with meal planning, inventory, and billing features.",
+      title: "IIITR Mess Management System",
+      description: "Comprehensive mess management system for IIIT Raichur hostels and cafeterias with meal planning, inventory management, and billing features built with PHP.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80",
-      tags: ["Web Development", "Management System", "Full-stack", "Database", "React"],
+      tags: ["Web Development", "PHP", "Mess Management", "Database", "Full-stack", "Hostel System"],
       links: {
-        github: "https://github.com/coderkage/Mess-Management",
-        demo: "https://github.com/coderkage/Mess-Management"
+        github: "https://github.com/coderkage/IIITR-Mess-Management-System",
+        demo: "https://github.com/coderkage/IIITR-Mess-Management-System"
       }
     },
     {
@@ -119,19 +119,19 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&q=80",
       tags: ["Web Development", "React", "Responsive Design", "Frontend", "UI/UX"],
       links: {
-        github: "https://github.com/coderkage/MRCF-Website",
-        demo: "https://github.com/coderkage/MRCF-Website"
+        github: "https://www.youtube.com/watch?v=dQw4w9WgXq6",
+        demo: "https://www.youtube.com/watch?v=dQw4w9WgXq6"
       }
     },
     {
       id: "track-75",
-      title: "Track 75",
-      description: "Progress tracking application for personal goals and milestones with analytics and visualization features.",
+      title: "Track75 - Geek Edition",
+      description: "Web application for keeping track of the 75-hard challenge with a geek twist, featuring progress tracking, analytics, and personal goal management.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80",
-      tags: ["Web App", "Progress Tracking", "Analytics", "React", "Data Visualization"],
+      tags: ["Web App", "Python", "75 Hard Challenge", "Progress Tracking", "Personal Development", "Flask/Django"],
       links: {
-        github: "https://github.com/coderkage/Track-75",
-        demo: "https://github.com/coderkage/Track-75"
+        github: "https://github.com/coderkage/track75",
+        demo: "https://github.com/coderkage/track75"
       }
     }
   ];
@@ -144,19 +144,19 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80",
       tags: ["Quantum Computing", "Neural Networks", "Hybrid Systems", "Qiskit", "Machine Learning"],
       links: {
-        github: "https://github.com/coderkage/Hybrid-QNN",
-        demo: "https://github.com/coderkage/Hybrid-QNN"
+        github: "https://www.youtube.com/watch?v=dQw4w9WgXq6",
+        demo: "https://www.youtube.com/watch?v=dQw4w9WgXq6"
       }
     },
     {
       id: "circuits-algorithms",
-      title: "Circuits and Algorithms",
-      description: "Implementation of various quantum circuits and algorithms including fundamental quantum computing principles and operations.",
+      title: "Quantum Computing Homework-3",
+      description: "Academic submission for Quantum Computing (CS333) course covering quantum algorithms implementation and circuit design using Qiskit framework.",
       image: "https://images.unsplash.com/photo-1636953056323-9c09fdd74fa6?auto=format&fit=crop&q=80",
-      tags: ["Quantum Circuits", "Quantum Algorithms", "Qiskit", "Python", "Research"],
+      tags: ["Quantum Circuits", "Quantum Algorithms", "Qiskit", "Python", "Academic Project", "Jupyter Notebook"],
       links: {
-        github: "https://github.com/coderkage/Circuits-and-Algorithms",
-        demo: "https://github.com/coderkage/Circuits-and-Algorithms"
+        github: "https://github.com/coderkage/Quantum-Computing-Homework-3",
+        demo: "https://github.com/coderkage/Quantum-Computing-Homework-3"
       }
     }
   ];
@@ -164,24 +164,24 @@ export default function Projects() {
   const miscellaneousProjects = [
     {
       id: "myneta-webscraper",
-      title: "MyNeta WebScraper",
-      description: "Web scraping tool for extracting political candidate information and electoral data from MyNeta platform.",
+      title: "Web Scraper MyNeta",
+      description: "Python-based web scraping tool for extracting political candidate information and electoral data from the MyNeta platform for analysis and research.",
       image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80",
-      tags: ["Web Scraping", "Python", "Data Extraction", "Political Data", "Automation"],
+      tags: ["Web Scraping", "Python", "Political Data", "Data Extraction", "MyNeta", "Electoral Analysis"],
       links: {
-        github: "https://github.com/coderkage/MyNeta-WebScraper",
-        demo: "https://github.com/coderkage/MyNeta-WebScraper"
+        github: "https://github.com/coderkage/Web-Scraper-MyNeta",
+        demo: "https://github.com/coderkage/Web-Scraper-MyNeta"
       }
     },
     {
       id: "lossy-image-compression",
-      title: "Lossy Image Compression (JPEG)",
-      description: "Implementation of JPEG compression algorithm for lossy image compression with customizable quality settings.",
+      title: "Image Compression (DCT Method)",
+      description: "Implementation of lossy image compression using discrete cosine transform (DCT) method with MATLAB, demonstrating digital signal processing techniques.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80",
-      tags: ["Image Compression", "JPEG", "Algorithm Implementation", "Python", "Digital Signal Processing"],
+      tags: ["Image Compression", "DCT", "MATLAB", "Digital Signal Processing", "Algorithm Implementation", "MIT License"],
       links: {
-        github: "https://github.com/coderkage/Lossy-Image-Compression-JPEG",
-        demo: "https://github.com/coderkage/Lossy-Image-Compression-JPEG"
+        github: "https://github.com/coderkage/Image-Compression",
+        demo: "https://github.com/coderkage/Image-Compression"
       }
     }
   ];
@@ -249,7 +249,7 @@ export default function Projects() {
     
     return (
       <>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="projects" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProjects.map((project, index) => (
             <div 
               key={project.id}
