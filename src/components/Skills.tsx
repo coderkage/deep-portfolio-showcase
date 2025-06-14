@@ -68,52 +68,61 @@ export default function Skills() {
 
   const SkillCard = ({ skill, index }: { skill: { name: string; logo: string }, index: number }) => (
     <div
-      className="flex flex-col items-center p-2 glass rounded-lg border border-border/30 hover:border-primary/40 transition-all duration-300 hover:scale-105 group cursor-default"
-      style={{ animationDelay: `${index * 100}ms` }}
+      className={`flex flex-col items-center p-3 glass rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-500 hover:scale-105 group cursor-default shadow-lg hover:shadow-primary/10 ${
+        isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-4'
+      }`}
+      style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-white/10 rounded-md p-1.5">
+      <div className="w-10 h-10 mb-3 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-2 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300">
         <img 
           src={skill.logo} 
           alt={`${skill.name} logo`}
-          className="w-full h-full object-contain filter group-hover:brightness-110 transition-all"
+          className="w-full h-full object-contain filter group-hover:brightness-110 group-hover:drop-shadow-sm transition-all duration-300"
           onError={(e) => {
-            // Fallback to a placeholder if image fails to load
             e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23059669' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccode%3E%3C/code%3E%3C/svg%3E";
           }}
         />
       </div>
-      <span className="text-xs font-medium text-center group-hover:text-primary transition-colors">
+      <span className="text-sm font-medium text-center group-hover:text-primary transition-colors duration-300 leading-tight">
         {skill.name}
       </span>
     </div>
   );
 
   return (
-    <section id="skills" className="section-container relative overflow-hidden py-16">
-      {/* Background decorative elements */}
+    <section id="skills" className="section-container relative overflow-hidden py-20">
+      {/* Enhanced background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-accent/5 rounded-full blur-xl"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-l from-accent/5 to-primary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-primary/3 rounded-full blur-xl animate-glow-pulse"></div>
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-10">
-          <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
-            Skills
+        <div className="text-center mb-12">
+          <span className="inline-block px-4 py-2 text-sm font-medium rounded-full glass mb-6 text-primary border border-primary/20">
+            Skills & Expertise
           </span>
-          <h2 className="text-3xl md:text-4xl font-medium mb-4 opacity-90">Complete <span className="gradient-text">Tech Stack</span></h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8">
+          <h2 className="text-3xl md:text-4xl font-medium mb-6 opacity-90">Complete <span className="gradient-text">Tech Stack</span></h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
             Full-stack AI engineer with comprehensive expertise across the entire machine learning and software development lifecycle.
           </p>
         </div>
         
-        <div className="space-y-8">
+        <div className="space-y-12">
           {skillsData.map((category, categoryIndex) => (
-            <div key={category.category} className="animate-fade-in" style={{ animationDelay: `${categoryIndex * 200}ms` }}>
-              <h3 className="text-lg font-medium mb-4 text-center gradient-text">
-                {category.category}
-              </h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-3">
+            <div 
+              key={category.category} 
+              className={`${isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-6'}`} 
+              style={{ animationDelay: `${categoryIndex * 150}ms` }}
+            >
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-semibold mb-2 gradient-text">
+                  {category.category}
+                </h3>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto opacity-60"></div>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
                 {category.skills.map((skill, skillIndex) => (
                   <SkillCard 
                     key={skill.name} 
@@ -126,10 +135,10 @@ export default function Skills() {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <div className="glass rounded-xl p-6 border border-border backdrop-blur-lg">
-            <h3 className="text-lg font-medium mb-3 gradient-text">Core Expertise</h3>
-            <p className="text-muted-foreground mb-4 max-w-3xl mx-auto text-sm">
+        <div className="mt-16 text-center">
+          <div className={`glass rounded-2xl p-8 border border-border backdrop-blur-lg shadow-2xl ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{ animationDelay: '600ms' }}>
+            <h3 className="text-xl font-semibold mb-4 gradient-text">Core Expertise</h3>
+            <p className="text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
               Specialized in building end-to-end AI solutions, from research and model development to production deployment. 
               Experienced in architecting scalable systems that bridge the gap between cutting-edge AI research and real-world applications.
             </p>
@@ -142,7 +151,9 @@ export default function Skills() {
               ].map((expertise, index) => (
                 <span 
                   key={expertise}
-                  className="px-3 py-1.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full text-xs font-medium border border-primary/30 animate-fade-in hover:scale-105 transition-transform cursor-default"
+                  className={`px-4 py-2 bg-gradient-to-r from-primary/15 to-accent/15 rounded-full text-sm font-medium border border-primary/25 hover:scale-105 transition-all duration-300 cursor-default hover:shadow-lg hover:shadow-primary/10 ${
+                    isVisible ? 'animate-fade-in' : 'opacity-0'
+                  }`}
                   style={{ animationDelay: `${index * 100 + 800}ms` }}
                 >
                   {expertise}
