@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Mail, Send, Phone, MapPin } from "lucide-react";
+import { Mail, Send, Phone, MapPin, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,31 +11,45 @@ export default function Contact() {
     message: ""
   });
   
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject || "Contact from Portfolio");
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    
-    // Open default email client
-    window.location.href = `mailto:contact@deeppatel.ai?subject=${subject}&body=${body}`;
-    
-    // Show success message and clear form
-    toast.success("Opening your email client...");
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
+    try {
+      // You'll need to replace these with your actual EmailJS service ID, template ID, and public key
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'contact@deeppatel.ai'
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+      
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -237,10 +252,20 @@ export default function Contact() {
               
               <button
                 type="submit"
-                className="flex items-center justify-center w-full py-3 px-6 bg-primary text-primary-foreground rounded-lg font-medium transition-all transform hover:translate-y-[-2px]"
+                disabled={isSubmitting}
+                className="flex items-center justify-center w-full py-3 px-6 bg-primary text-primary-foreground rounded-lg font-medium transition-all transform hover:translate-y-[-2px] disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send className="w-5 h-5 mr-2" />
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>
