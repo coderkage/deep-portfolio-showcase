@@ -37,14 +37,14 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-3 glass shadow-lg border-b border-primary/20" : "py-6"
+        scrolled ? "py-3 glass shadow-sm border-b border-border/50" : "py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold tracking-wider z-10 font-gothic">
-            Deep<span className="text-primary">Patel</span>
+          <a href="#" className="text-xl font-medium tracking-tight z-10">
+            Deep<span className="text-primary/80">Patel</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -53,7 +53,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors duration-200 font-gothic tracking-wide"
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {item.name}
               </a>
@@ -70,7 +70,7 @@ export default function Header() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full flex items-center justify-center glass text-foreground hover:text-primary transition-all duration-300 border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/25"
+                  className="w-10 h-10 rounded-full flex items-center justify-center glass text-foreground hover:text-primary transition-all duration-300 border border-border hover:border-primary/50"
                   aria-label={item.name}
                 >
                   <Icon className="w-5 h-5" />
@@ -106,7 +106,7 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              className="text-2xl font-bold text-foreground hover:text-primary transition-colors duration-200 font-gothic tracking-wider"
+              className="text-2xl font-medium text-foreground hover:text-primary transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
               {item.name}

@@ -20,9 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ["Crimson Text", "Playfair Display", "serif"],
+				sans: ["Inter", "system-ui", "sans-serif"],
 				mono: ["JetBrains Mono", "monospace"],
-				gothic: ["Crimson Text", "Playfair Display", "serif"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
