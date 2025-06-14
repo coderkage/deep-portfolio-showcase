@@ -7,15 +7,17 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Handle scroll event to change header background
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Navigation items
   const navItems = [
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
@@ -25,6 +27,7 @@ export default function Header() {
     { name: "Contact", href: "#contact" },
   ];
 
+  // Social Links
   const socialLinks = [
     { name: "GitHub", href: "https://github.com/deeppatel234", icon: Github },
     { name: "LinkedIn", href: "https://linkedin.com/in/deeppatel234", icon: Linkedin },
@@ -33,38 +36,32 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "py-4 glass-card shadow-2xl border-b border-white/20" 
-          : "py-6 bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "py-3 glass shadow-sm border-b border-border/50" : "py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
-          {/* Enhanced Logo */}
-          <a href="#" className="relative group z-10">
-            <span className="text-2xl font-bold tracking-tight">
-              Deep<span className="gradient-text">Patel</span>
-            </span>
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full"></div>
+          {/* Logo */}
+          <a href="#" className="text-xl font-medium tracking-tight z-10">
+            Deep<span className="text-primary/80">Patel</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-all duration-300 rounded-xl hover:bg-white/10 group"
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 {item.name}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-3/4"></div>
               </a>
             ))}
           </nav>
 
           {/* Desktop Social Links + Theme Toggle */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-4">
             {socialLinks.map((item) => {
               const Icon = item.icon;
               return (
@@ -73,21 +70,19 @@ export default function Header() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl glass flex items-center justify-center text-foreground hover:text-primary transition-all duration-300 hover:scale-110 hover:shadow-xl group"
+                  className="w-10 h-10 rounded-full flex items-center justify-center glass text-foreground hover:text-primary transition-all duration-300 border border-border hover:border-primary/50"
                   aria-label={item.name}
                 >
-                  <Icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <Icon className="w-5 h-5" />
                 </a>
               );
             })}
-            <div className="ml-2">
-              <ThemeToggle />
-            </div>
+            <ThemeToggle />
           </div>
 
           {/* Mobile Navigation Toggle */}
           <button
-            className="lg:hidden z-10 w-12 h-12 rounded-xl glass flex items-center justify-center"
+            className="md:hidden z-10"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -100,26 +95,25 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Enhanced Mobile Menu */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 glass-card z-10 flex flex-col transition-all duration-500 ease-in-out transform ${
-          isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        } lg:hidden`}
+        className={`fixed inset-0 bg-background/90 glass z-10 flex flex-col transition-transform duration-300 ease-in-out transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } md:hidden`}
       >
         <div className="flex-1 flex flex-col items-center justify-center space-y-8 p-8">
-          {navItems.map((item, index) => (
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-3xl font-semibold text-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
+              className="text-2xl font-medium text-foreground hover:text-primary transition-colors duration-200"
               onClick={() => setIsOpen(false)}
-              style={{ animationDelay: `${index * 100}ms` }}
             >
               {item.name}
             </a>
           ))}
           
-          <div className="flex items-center space-x-4 mt-12">
+          <div className="flex items-center space-x-4 mt-8">
             {socialLinks.map((item) => {
               const Icon = item.icon;
               return (
@@ -128,10 +122,10 @@ export default function Header() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-14 h-14 rounded-2xl glass flex items-center justify-center text-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 rounded-full flex items-center justify-center glass text-foreground hover:text-primary transition-all duration-300 border border-border hover:border-primary/50"
                   aria-label={item.name}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="w-5 h-5" />
                 </a>
               );
             })}
