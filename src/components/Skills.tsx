@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 export default function Skills() {
@@ -68,12 +67,12 @@ export default function Skills() {
 
   const SkillCard = ({ skill, index }: { skill: { name: string; logo: string }, index: number }) => (
     <div
-      className={`flex flex-col items-center justify-between p-4 glass rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-500 hover:scale-105 group cursor-default shadow-lg hover:shadow-primary/10 aspect-square ${
+      className={`flex flex-col items-center p-3 glass rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-500 hover:scale-105 group cursor-default shadow-lg hover:shadow-primary/10 ${
         isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-4'
       } shadow-[0_0_20px_rgba(16,185,129,0.12)] hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]`}
       style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-2 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.15)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+      <div className="w-10 h-10 mb-3 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-2 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.15)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
         <img 
           src={skill.logo} 
           alt={`${skill.name} logo`}
@@ -83,7 +82,7 @@ export default function Skills() {
           }}
         />
       </div>
-      <span className="text-sm font-medium text-center group-hover:text-primary transition-colors duration-300 leading-tight mt-2">
+      <span className="text-sm font-medium text-center group-hover:text-primary transition-colors duration-300 leading-tight">
         {skill.name}
       </span>
     </div>
