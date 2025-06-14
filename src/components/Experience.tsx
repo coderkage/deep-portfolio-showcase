@@ -1,3 +1,4 @@
+
 import { CalendarDays, Navigation, MapPin, Building, ExternalLink } from "lucide-react";
 
 export default function Experience() {
@@ -40,8 +41,11 @@ export default function Experience() {
               </div>
               
               {/* Content */}
-              <div className="md:order-0 group">
-                <div className="ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
+              <div className="md:order-0 group relative">
+                {/* Soft glow background */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                
+                <div className="relative ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="bg-primary/10 rounded-lg p-2">
@@ -114,8 +118,11 @@ export default function Experience() {
               </div>
               
               {/* Content */}
-              <div className="md:order-1 group">
-                <div className="ml-8 md:ml-8 md:mr-0 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
+              <div className="md:order-1 group relative">
+                {/* Soft glow background */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-accent/20 to-accent/10 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                
+                <div className="relative ml-8 md:ml-8 md:mr-0 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="bg-accent/20 rounded-lg p-2">
