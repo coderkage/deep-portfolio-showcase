@@ -14,7 +14,7 @@ export default function Projects() {
     'miscellaneous': false
   });
 
-const nlpLlmProjects = [
+  const nlpLlmProjects = [
     {
       id: "rumbleradar",
       title: "RumbleRadar",
@@ -239,7 +239,6 @@ const nlpLlmProjects = [
   ];
 
   const renderProjectGrid = (projects: any[], additionalProjects: any[], categoryId: string) => {
-    // For categories with more than 6 projects, split them
     const hasMoreThanSix = projects.length > 6;
     const initialProjects = hasMoreThanSix ? projects.slice(0, 6) : projects;
     const remainingProjects = hasMoreThanSix ? projects.slice(6) : [];
@@ -253,7 +252,7 @@ const nlpLlmProjects = [
           {displayedProjects.map((project, index) => (
             <div 
               key={project.id}
-              className="glass rounded-xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 hover:translate-y-[-4px] group animate-fade-in"
+              className="glass rounded-xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 hover:translate-y-[-4px] group animate-fade-in backdrop-blur-lg bg-card/50"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="aspect-video relative overflow-hidden">
@@ -264,13 +263,12 @@ const nlpLlmProjects = [
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 
-                {/* Project Links */}
                 <div className="absolute top-4 right-4 flex space-x-2 z-20">
                   <a 
                     href={project.links.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full glass flex items-center justify-center text-foreground hover:text-primary transition-colors"
+                    className="w-8 h-8 rounded-full glass flex items-center justify-center text-foreground hover:text-primary transition-colors backdrop-blur-lg"
                     aria-label={`GitHub: ${project.title}`}
                   >
                     <Github className="w-4 h-4" />
@@ -279,7 +277,7 @@ const nlpLlmProjects = [
                     href={project.links.demo} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full glass flex items-center justify-center text-foreground hover:text-primary transition-colors"
+                    className="w-8 h-8 rounded-full glass flex items-center justify-center text-foreground hover:text-primary transition-colors backdrop-blur-lg"
                     aria-label={`Live Demo: ${project.title}`}
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -287,7 +285,7 @@ const nlpLlmProjects = [
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="p-6 bg-card/30 backdrop-blur-sm">
                 <h3 className="text-xl font-medium mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
@@ -300,7 +298,7 @@ const nlpLlmProjects = [
                   {project.tags.map((tag: string) => (
                     <span 
                       key={tag} 
-                      className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium"
+                      className="px-3 py-1 bg-primary/10 rounded-full text-xs font-medium border border-primary/20 backdrop-blur-sm"
                     >
                       {tag}
                     </span>
@@ -323,7 +321,7 @@ const nlpLlmProjects = [
           <div className="text-center mt-12">
             <button 
               onClick={() => setShowMore(prev => ({ ...prev, [categoryId]: !prev[categoryId] }))}
-              className="glass px-6 py-3 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center space-x-2"
+              className="glass px-6 py-3 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center space-x-2 backdrop-blur-lg bg-card/30"
             >
               <span>{showMore[categoryId] ? 'Show Less Projects' : 'View More Projects'}</span>
               <ArrowRight className={`w-4 h-4 transition-transform ${showMore[categoryId] ? 'rotate-180' : ''}`} />
@@ -335,10 +333,13 @@ const nlpLlmProjects = [
   };
 
   return (
-    <section id="projects" className="section-container bg-accent/50">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="section-container relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent"></div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
+          <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary backdrop-blur-lg">
             Projects
           </span>
           <h2 className="section-title">Featured Work</h2>
@@ -348,14 +349,14 @@ const nlpLlmProjects = [
         </div>
         
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="grid w-full grid-cols-7 mb-12 h-auto">
+          <TabsList className="grid w-full grid-cols-7 mb-12 h-auto glass backdrop-blur-lg border border-border/50">
             {projectCategories.map((category) => {
               const IconComponent = category.icon;
               return (
                 <TabsTrigger 
                   key={category.id} 
                   value={category.id}
-                  className="flex flex-col items-center space-y-1 py-3 px-2 text-xs"
+                  className="flex flex-col items-center space-y-1 py-3 px-2 text-xs data-[state=active]:bg-primary/20 transition-all"
                 >
                   <IconComponent className="w-4 h-4" />
                   <span className="hidden sm:inline">{category.label}</span>
@@ -377,7 +378,7 @@ const nlpLlmProjects = [
             href="https://github.com/coderkage"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass px-6 py-3 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center space-x-2"
+            className="glass px-6 py-3 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center space-x-2 backdrop-blur-lg bg-card/30"
           >
             <span>View on GitHub</span>
             <Github className="w-4 h-4" />

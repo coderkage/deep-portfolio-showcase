@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Brain, Code, Computer, Settings, Terminal, Beaker } from "lucide-react";
+import { Brain, Code, Computer, Settings, Terminal, Beaker, Database, Globe, Cpu, Shield, Zap, Layers } from "lucide-react";
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,65 +24,91 @@ export default function Skills() {
     };
   }, []);
 
-  const skillCategories = [
+  const skillsData = [
+    // First row - AI & Programming
     {
-      name: "AI & Machine Learning",
-      icon: Brain,
       skills: [
-        "PyTorch", "TensorFlow", "Hugging Face", "LangChain", "NLP", 
-        "LLM Fine-tuning", "RAG Systems", "Agentic AI", "BERT", 
-        "Transformers", "Embeddings", "Function Calling"
-      ],
-      gradient: "from-emerald-500 to-green-500"
+        { name: "PyTorch", icon: Brain, color: "text-orange-400" },
+        { name: "TensorFlow", icon: Cpu, color: "text-orange-500" },
+        { name: "Python", icon: Code, color: "text-blue-400" },
+        { name: "JavaScript", icon: Code, color: "text-yellow-400" },
+        { name: "TypeScript", icon: Code, color: "text-blue-500" },
+        { name: "Hugging Face", icon: Brain, color: "text-purple-400" },
+        { name: "LangChain", icon: Layers, color: "text-green-400" },
+        { name: "NLP", icon: Brain, color: "text-pink-400" },
+        { name: "LLM Fine-tuning", icon: Settings, color: "text-indigo-400" },
+        { name: "RAG Systems", icon: Database, color: "text-cyan-400" }
+      ]
     },
+    // Second row - Development & Tools
     {
-      name: "Programming Languages",
-      icon: Code,
       skills: [
-        "Python", "JavaScript", "TypeScript", "C++", "SQL"
-      ],
-      gradient: "from-green-500 to-emerald-600"
+        { name: "React", icon: Computer, color: "text-cyan-400" },
+        { name: "Flask", icon: Globe, color: "text-green-500" },
+        { name: "FastAPI", icon: Zap, color: "text-emerald-400" },
+        { name: "Docker", icon: Layers, color: "text-blue-600" },
+        { name: "AWS", icon: Database, color: "text-orange-600" },
+        { name: "Kubernetes", icon: Settings, color: "text-blue-500" },
+        { name: "Git", icon: Terminal, color: "text-red-400" },
+        { name: "scikit-learn", icon: Beaker, color: "text-orange-400" },
+        { name: "Pandas", icon: Database, color: "text-purple-500" },
+        { name: "NumPy", icon: Terminal, color: "text-blue-400" }
+      ]
     },
+    // Third row - Specialized & Research
     {
-      name: "Development & Tools",
-      icon: Computer,
       skills: [
-        "React", "Flask", "FastAPI", "Docker", "AWS", "Git", 
-        "RESTful APIs", "Streamlit", "Web Development"
-      ],
-      gradient: "from-emerald-600 to-teal-500"
-    },
-    {
-      name: "Data Science & Analytics",
-      icon: Terminal,
-      skills: [
-        "Pandas", "NumPy", "scikit-learn", "Data Visualization", 
-        "Data Engineering", "Model Optimization", "MLflow"
-      ],
-      gradient: "from-teal-500 to-green-600"
-    },
-    {
-      name: "DevOps & Infrastructure",
-      icon: Settings,
-      skills: [
-        "Kubernetes", "CI/CD Pipelines", "Cloud Computing", "Containerization"
-      ],
-      gradient: "from-green-600 to-emerald-500"
-    },
-    {
-      name: "Research & Analysis",
-      icon: Beaker,
-      skills: [
-        "Sentiment Analysis", "Text Summarization", "Document AI", 
-        "Classification", "ROUGE", "BLEU", "Disaster Management"
-      ],
-      gradient: "from-emerald-500 to-green-500"
+        { name: "BERT", icon: Brain, color: "text-green-500" },
+        { name: "Transformers", icon: Cpu, color: "text-purple-600" },
+        { name: "Embeddings", icon: Layers, color: "text-teal-400" },
+        { name: "MLflow", icon: Settings, color: "text-blue-500" },
+        { name: "Streamlit", icon: Globe, color: "text-red-500" },
+        { name: "C++", icon: Code, color: "text-blue-600" },
+        { name: "SQL", icon: Database, color: "text-indigo-500" },
+        { name: "CI/CD", icon: Terminal, color: "text-green-600" },
+        { name: "Sentiment Analysis", icon: Brain, color: "text-pink-500" },
+        { name: "Document AI", icon: Beaker, color: "text-cyan-500" }
+      ]
     }
   ];
 
+  const MarqueeRow = ({ skills, direction = "left", speed = "20s" }: { 
+    skills: Array<{ name: string; icon: any; color: string }>, 
+    direction?: "left" | "right",
+    speed?: string 
+  }) => (
+    <div className="flex overflow-hidden whitespace-nowrap">
+      <div 
+        className={`flex gap-6 ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}`}
+        style={{ animationDuration: speed }}
+      >
+        {[...skills, ...skills].map((skill, index) => {
+          const IconComponent = skill.icon;
+          return (
+            <div
+              key={`${skill.name}-${index}`}
+              className="flex items-center gap-3 px-4 py-3 glass rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-300 hover:scale-105 group cursor-default"
+            >
+              <IconComponent className={`w-5 h-5 ${skill.color} group-hover:scale-110 transition-transform`} />
+              <span className="text-sm font-medium whitespace-nowrap group-hover:text-primary transition-colors">
+                {skill.name}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+
   return (
-    <section id="skills" className="section-container">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="section-container relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/5 rounded-full blur-xl"></div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
             Skills
@@ -93,45 +119,19 @@ export default function Skills() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, categoryIndex) => {
-            const IconComponent = category.icon;
-            return (
-              <div 
-                key={category.name}
-                className="glass rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-500 group animate-fade-in"
-                style={{ animationDelay: `${categoryIndex * 150}ms` }}
-              >
-                <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.gradient} flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-medium group-hover:text-primary transition-colors">
-                    {category.name}
-                  </h3>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, index) => (
-                    <span 
-                      key={skill}
-                      className={`px-3 py-1.5 bg-gradient-to-r ${category.gradient} bg-opacity-10 rounded-full text-sm font-medium border border-primary/20 hover:border-primary/40 transition-all duration-300 cursor-default animate-fade-in hover:scale-105`}
-                      style={{ 
-                        animationDelay: `${(categoryIndex * 6 + index) * 100 + 300}ms`,
-                        opacity: isVisible ? 1 : 0
-                      }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+        <div className="space-y-8">
+          {skillsData.map((row, index) => (
+            <MarqueeRow 
+              key={index} 
+              skills={row.skills} 
+              direction={index % 2 === 0 ? "left" : "right"}
+              speed={`${25 + index * 5}s`}
+            />
+          ))}
         </div>
         
         <div className="mt-16 text-center">
-          <div className="glass rounded-xl p-8 border border-border">
+          <div className="glass rounded-xl p-8 border border-border backdrop-blur-lg">
             <h3 className="text-xl font-medium mb-4 gradient-text">Core Expertise</h3>
             <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
               Specialized in building end-to-end AI solutions, from research and model development to production deployment. 
@@ -140,13 +140,13 @@ export default function Skills() {
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 "End-to-End AI Development",
-                "Production ML Systems",
+                "Production ML Systems", 
                 "Research & Innovation",
                 "Technical Leadership"
               ].map((expertise, index) => (
                 <span 
                   key={expertise}
-                  className="px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-full text-sm font-medium border border-primary/30 animate-fade-in"
+                  className="px-4 py-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full text-sm font-medium border border-primary/30 animate-fade-in hover:scale-105 transition-transform cursor-default"
                   style={{ animationDelay: `${index * 100 + 800}ms` }}
                 >
                   {expertise}

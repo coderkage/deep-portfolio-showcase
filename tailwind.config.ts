@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -109,6 +108,14 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' }
+        },
+        'marquee-left': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' }
+        },
+        'marquee-right': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' }
         }
 			},
 			animation: {
@@ -120,7 +127,9 @@ export default {
 				'glow-pulse': 'glowPulse 2s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',
 				'spin-slow': 'spin 8s linear infinite',
-				'float': 'float 5s ease-in-out infinite'
+				'float': 'float 5s ease-in-out infinite',
+				'marquee-left': 'marquee-left var(--duration, 20s) linear infinite',
+				'marquee-right': 'marquee-right var(--duration, 20s) linear infinite'
 			}
 		}
 	},

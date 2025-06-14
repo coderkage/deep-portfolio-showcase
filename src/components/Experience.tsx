@@ -1,12 +1,15 @@
-
 import { CalendarDays, Navigation, MapPin, Building, ExternalLink } from "lucide-react";
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-container bg-accent/50">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="section-container relative overflow-hidden">
+      {/* Subtle background contrast */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-accent/5 via-transparent to-transparent"></div>
+      
+      <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
+          <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary backdrop-blur-lg">
             Experience
           </span>
           <h2 className="section-title">Professional Journey</h2>
@@ -30,7 +33,7 @@ export default function Experience() {
               
               {/* Date for large screens */}
               <div className="hidden md:flex md:order-1 justify-start items-center">
-                <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20">
+                <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20 backdrop-blur-lg bg-card/20">
                   <CalendarDays className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium">May 2023 - August 2023</span>
                 </div>
@@ -38,7 +41,7 @@ export default function Experience() {
               
               {/* Content */}
               <div className="md:order-0 group">
-                <div className="ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg">
+                <div className="ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="bg-primary/10 rounded-lg p-2">
@@ -58,7 +61,6 @@ export default function Experience() {
                       <span>Remote</span>
                     </div>
                     
-                    {/* Date for mobile */}
                     <div className="md:hidden flex items-center text-sm text-muted-foreground">
                       <CalendarDays className="w-4 h-4 mr-1" />
                       <span>May - Aug 2023</span>
@@ -87,7 +89,7 @@ export default function Experience() {
                   
                   <div className="flex flex-wrap gap-2 mt-4">
                     {["Python", "PyTorch", "NLP", "Flask", "ML Ops"].map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium">
+                      <span key={tech} className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium border border-primary/20">
                         {tech}
                       </span>
                     ))}
@@ -105,7 +107,7 @@ export default function Experience() {
               
               {/* Date for large screens */}
               <div className="hidden md:flex md:order-0 justify-end items-center">
-                <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20">
+                <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20 backdrop-blur-lg bg-card/20">
                   <CalendarDays className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium">Jan 2023 - May 2023</span>
                 </div>
@@ -113,7 +115,7 @@ export default function Experience() {
               
               {/* Content */}
               <div className="md:order-1 group">
-                <div className="ml-8 md:ml-8 md:mr-0 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg">
+                <div className="ml-8 md:ml-8 md:mr-0 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="bg-accent/20 rounded-lg p-2">
@@ -133,7 +135,6 @@ export default function Experience() {
                       <span>Raichur, India</span>
                     </div>
                     
-                    {/* Date for mobile */}
                     <div className="md:hidden flex items-center text-sm text-muted-foreground">
                       <CalendarDays className="w-4 h-4 mr-1" />
                       <span>Jan - May 2023</span>
@@ -162,7 +163,7 @@ export default function Experience() {
                   
                   <div className="flex flex-wrap gap-2 mt-4">
                     {["Research", "Machine Learning", "Data Analysis", "TensorFlow"].map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs font-medium">
+                      <span key={tech} className="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs font-medium border border-accent/20">
                         {tech}
                       </span>
                     ))}
