@@ -82,15 +82,15 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a 
-                  href="mailto:contact@deeppatel.ai" 
+                  href="mailto:deeppatel3910@gmail.com" 
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  contact@deeppatel.ai
+                  E-mail
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://github.com/deeppatel234" 
+                  href="https://github.com/coderkage" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -100,7 +100,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://linkedin.com/in/deeppatel234" 
+                  href="https://www.linkedin.com/in/deeppatel3910/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -110,7 +110,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://kaggle.com/deeppatel234" 
+                  href="https://www.kaggle.com/deeppatel03" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"

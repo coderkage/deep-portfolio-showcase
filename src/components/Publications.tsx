@@ -18,54 +18,51 @@ export default function Publications() {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
     },
     {
-      title: "Physics-Informed Neural Networks for Quantum System Simulation",
+      title: "QR Code Forgery Detection : A Cross-architectural Analysis of Classical ML, FFNN, CNN, and ResNet Architectures",
       type: "Technical Paper",
       venue: "Independent Research",
       year: "2024",
       description: "Implemented Physics-Informed Neural Networks from scratch to solve the time-dependent Schrödinger equation for quantum systems. Designed custom loss functions incorporating PDE constraints and compared performance against traditional numerical solvers for quantum state evolution.",
       tags: ["Physics-Informed Neural Networks", "Quantum Computing", "PDEs", "Scientific Computing"],
       links: [
-        { type: "GitHub", url: "#", icon: Github }
+        { type: "PDF", url: "#", icon: FileText }
       ],
       isPeerReviewed: false,
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
     },
     {
-      title: "Subword-Aware Neural Machine Translation for English-French Language Pairs",
+      title: "Node Embeddings in Large Graphs via Adversarially Regularized Variational Autoencoders",
       type: "Capstone Report",
       venue: "Academic Project",
       year: "2024",
       description: "Developed a sequence-to-sequence neural machine translation model with attention mechanisms for English-French translation. Implemented subword tokenization, teacher forcing, and masking techniques, achieving competitive BLEU scores on parallel corpora datasets.",
       tags: ["Neural Machine Translation", "Seq2Seq", "Attention Mechanisms", "NLP"],
       links: [
-        { type: "GitHub", url: "#", icon: Github }
-      ],
+{ type: "PDF", url: "#", icon: FileText }      ],
       isPeerReviewed: false,
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop"
     },
     {
-      title: "Hybrid Image Compression: Comparative Analysis of Classical and Deep Learning Approaches",
+      title: "Hybrid Quantum Neural Networks for Function Approximation and Classification Using the Torch Connector",
       type: "Technical Paper",
       venue: "Independent Study",
       year: "2024",
       description: "Conducted comprehensive comparison between traditional unsupervised learning methods (PCA + K-Means clustering) and convolutional autoencoders for image compression. Evaluated performance using PSNR, SSIM, compression ratios, and bits-per-pixel metrics across diverse image datasets.",
       tags: ["Image Compression", "Autoencoders", "PCA", "Computer Vision"],
       links: [
-        { type: "GitHub", url: "#", icon: Github }
-      ],
+{ type: "PDF", url: "#", icon: FileText }      ],
       isPeerReviewed: false,
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
     },
     {
-      title: "RAG-Enhanced LLM System for Automated YouTube Content Summarization",
+      title: "Enhancing Traffic Management in Urban Areas: Efficient Data Rate & Bandwidth Utilization",
       type: "Technical Paper",
       venue: "Independent Project",
       year: "2024",
       description: "Engineered an end-to-end Retrieval-Augmented Generation pipeline for automated video content analysis. Implemented web scraping, transcript filtering, and local LLM integration to generate contextual summaries of YouTube videos based on user queries, deployed as a Python CLI application.",
       tags: ["RAG", "Large Language Models", "Information Retrieval", "Web Scraping"],
       links: [
-        { type: "GitHub", url: "#", icon: Github }
-      ],
+{ type: "PDF", url: "#", icon: FileText }      ],
       isPeerReviewed: false,
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
     }

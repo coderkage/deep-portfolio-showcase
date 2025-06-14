@@ -28,7 +28,7 @@ export default function Skills() {
       skills: [
         { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-        { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+        { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
         { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
         { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
       ]
@@ -54,13 +54,14 @@ export default function Skills() {
       ]
     },
     {
-      category: "Tools & Technologies",
+      category: "DevOps & Cloud",
       skills: [
         { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-        { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+        { name: "AWS", logo: "https://static-00.iconduck.com/assets.00/aws-icon-512x512-4v2f55fn.png" },
+        { name: "GCP", logo: "https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png" },
         { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
         { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "MLflow", logo: "https://mlflow.org/docs/latest/_static/MLflow-logo-final-black.png" }
+        { name: "MLflow", logo: "https://cdn.brandfetch.io/mlflow.org/fallback/lettermark/theme/dark/h/256/w/256/icon?c=1bfwsmEH20zzEfSNTed" }
       ]
     }
   ];
@@ -72,16 +73,17 @@ export default function Skills() {
       } shadow-[0_0_20px_rgba(16,185,129,0.12)] hover:shadow-[0_0_30px_rgba(16,185,129,0.25)]`}
       style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="w-10 h-10 mb-3 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-2 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.15)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-        <img 
-          src={skill.logo} 
-          alt={`${skill.name} logo`}
-          className="w-full h-full object-contain filter group-hover:brightness-110 group-hover:drop-shadow-sm transition-all duration-300"
-          onError={(e) => {
-            e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23059669' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccode%3E%3C/code%3E%3C/svg%3E";
-          }}
-        />
-      </div>
+     <div className="w-14 h-14 sm:w-16 sm:h-16 mb-3 flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-2 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.15)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+  <img 
+    src={skill.logo} 
+    alt={`${skill.name} logo`}
+    className="w-full h-full object-contain filter group-hover:brightness-110 group-hover:drop-shadow-sm transition-all duration-300"
+    onError={(e) => {
+      e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23059669' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccode%3E%3C/code%3E%3C/svg%3E";
+    }}
+  />
+</div>
+
       <span className="text-sm font-medium text-center group-hover:text-primary transition-colors duration-300 leading-tight">
         {skill.name}
       </span>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Send, Phone, MapPin, Loader2 } from "lucide-react";
+import { Mail, Send, Phone, MapPin, Loader2, Github, Linkedin} from "lucide-react";
 import { toast } from "sonner";
 import emailjs from '@emailjs/browser';
 
@@ -73,7 +73,7 @@ export default function Contact() {
               <p className="text-muted-foreground mb-8">
                 Feel free to reach out using any of the methods below. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
-              
+              <br></br>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="mr-4 bg-primary/10 rounded-full p-3">
@@ -82,29 +82,44 @@ export default function Contact() {
                   <div>
                     <h4 className="font-medium">Email</h4>
                     <a 
-                      href="mailto:contact@deeppatel.ai" 
+                      href="mailto:deeppatel3910@gmail.com" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      contact@deeppatel.ai
+                      deeppatel3910@gmail.com
                     </a>
                   </div>
                 </div>
-                
+                <br />
                 <div className="flex items-start">
                   <div className="mr-4 bg-primary/10 rounded-full p-3">
-                    <Phone className="w-5 h-5 text-primary" />
+                    <Github className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium">Phone</h4>
+                    <h4 className="font-medium">Github</h4>
                     <a 
-                      href="tel:+910000000000" 
+                      href="https://github.com/coderkage" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +91 (000) 000-0000
+                      https://github.com/coderkage
                     </a>
                   </div>
                 </div>
-                
+<br></br>
+                <div className="flex items-start">
+                  <div className="mr-4 bg-primary/10 rounded-full p-3">
+                    <Github className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">LinkedIn</h4>
+                    <a 
+                      href="https://www.linkedin.com/in/deeppatel3910/" 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      https://www.linkedin.com/in/deeppatel3910/
+                    </a>
+                  </div>
+                </div>
+                <br></br>
                 <div className="flex items-start">
                   <div className="mr-4 bg-primary/10 rounded-full p-3">
                     <MapPin className="w-5 h-5 text-primary" />
@@ -112,17 +127,17 @@ export default function Contact() {
                   <div>
                     <h4 className="font-medium">Location</h4>
                     <p className="text-muted-foreground">
-                      Raichur, Karnataka, India
+                      Gandhinagar, Gujarat, India
                     </p>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-12">
+              {/* <div className="mt-12">
                 <h4 className="font-medium mb-4">Connect on Social Media</h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://github.com/deeppatel234" 
+                    href="https://github.com/coderkage" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full glass flex items-center justify-center text-foreground hover:text-primary transition-all duration-300 border border-border hover:border-primary/50"
@@ -134,7 +149,7 @@ export default function Contact() {
                   </a>
                   
                   <a 
-                    href="https://linkedin.com/in/deeppatel234" 
+                    href="https://www.linkedin.com/in/deeppatel3910/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full glass flex items-center justify-center text-foreground hover:text-primary transition-all duration-300 border border-border hover:border-primary/50"
@@ -175,7 +190,7 @@ export default function Contact() {
                     </svg>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           
