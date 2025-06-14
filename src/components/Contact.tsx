@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Mail, Send, Phone, MapPin, Loader2 } from "lucide-react";
+import { Mail, Send, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
 export default function Contact() {
@@ -11,8 +10,6 @@ export default function Contact() {
     message: ""
   });
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -20,19 +17,24 @@ export default function Contact() {
   
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast.success("Message sent successfully! I'll get back to you soon.");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
-    }, 1500);
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject || "Contact from Portfolio");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    
+    // Open default email client
+    window.location.href = `mailto:contact@deeppatel.ai?subject=${subject}&body=${body}`;
+    
+    // Show success message and clear form
+    toast.success("Opening your email client...");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
   };
 
   return (
@@ -235,20 +237,10 @@ export default function Contact() {
               
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="flex items-center justify-center w-full py-3 px-6 bg-primary text-primary-foreground rounded-lg font-medium transition-all transform hover:translate-y-[-2px] disabled:opacity-70 disabled:cursor-not-allowed"
+                className="flex items-center justify-center w-full py-3 px-6 bg-primary text-primary-foreground rounded-lg font-medium transition-all transform hover:translate-y-[-2px]"
               >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </>
-                )}
+                <Send className="w-5 h-5 mr-2" />
+                Send Message
               </button>
             </form>
           </div>
