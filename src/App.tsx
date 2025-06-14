@@ -10,6 +10,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from './components/ScrollToTop';
 import Loading from './components/Loading';
+import AnimatedBackground from './components/AnimatedBackground';
 
 const queryClient = new QueryClient();
 
@@ -32,16 +33,21 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/project/:id" element={<ProjectDetail />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <div className="relative min-h-screen">
+          <AnimatedBackground />
+          <div className="relative z-10">
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/project/:id" element={<ProjectDetail />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
+        </div>
       </TooltipProvider>
     </QueryClientProvider>
   );
