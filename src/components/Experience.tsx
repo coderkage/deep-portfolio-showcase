@@ -42,7 +42,7 @@ export default function Experience() {
               
               {/* Content */}
               <div className="md:order-0 group relative">
-                {/* Soft glow background */}
+                {/* Consistent soft glow background */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 
                 <div className="relative ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
@@ -119,21 +119,21 @@ export default function Experience() {
               
               {/* Content */}
               <div className="md:order-1 group relative">
-                {/* Soft glow background */}
-                <div className="absolute -inset-2 bg-gradient-to-r from-accent/20 to-accent/10 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                {/* Consistent soft glow background */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 
                 <div className="relative ml-8 md:ml-8 md:mr-0 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <div className="bg-accent/20 rounded-lg p-2">
-                        <Navigation className="w-5 h-5 text-accent" />
+                      <div className="bg-primary/10 rounded-lg p-2">
+                        <Navigation className="w-5 h-5 text-primary" />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold">Research Assistant</h3>
                         <p className="text-muted-foreground">IIIT Raichur</p>
                       </div>
                     </div>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                   </div>
                   
                   <div className="flex items-center space-x-4 mb-4">
@@ -154,15 +154,15 @@ export default function Experience() {
                     </p>
                     <ul className="space-y-1 text-sm text-muted-foreground">
                       <li className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
                         Collected and preprocessed multimodal data from various earthquake events
                       </li>
                       <li className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
                         Developed novel algorithms for risk assessment and emergency response
                       </li>
                       <li className="flex items-start">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
                         Published research findings in international conference (ACIIDS 2025)
                       </li>
                     </ul>
@@ -170,7 +170,7 @@ export default function Experience() {
                   
                   <div className="flex flex-wrap gap-2 mt-4">
                     {["Research", "Machine Learning", "Data Analysis", "TensorFlow"].map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-accent/10 text-accent rounded-md text-xs font-medium border border-accent/20">
+                      <span key={tech} className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium border border-primary/20">
                         {tech}
                       </span>
                     ))}
