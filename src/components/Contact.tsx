@@ -25,16 +25,16 @@ export default function Contact() {
     try {
       // You'll need to replace these with your actual EmailJS service ID, template ID, and public key
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_5wcpkrz',
+        'template_3dfut3t',
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
+          name: formData.name,
+          email: formData.email,
+          title: formData.subject,
           message: formData.message,
-          to_email: 'contact@deeppatel.ai'
+          reply_to: formData.email // optional fallback
         },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'k_b2-9wK32hTwa5Oo' // Your EmailJS public key
       );
       
       toast.success("Message sent successfully! I'll get back to you soon.");
