@@ -4,33 +4,33 @@ import { GraduationCap, Award, Book } from "lucide-react";
 export default function About() {
   const certifications = [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2023",
+      name: "Ethical Hacking",
+      issuer: "NPTEL",
+      year: "2024",
       credential: "SAA-C03",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400&h=300"
     },
     {
-      name: "Google Cloud Professional ML Engineer",
-      issuer: "Google Cloud",
-      year: "2023",
+      name: "Python for Data Science and Machine Learning",
+      issuer: "Udemy",
+      year: "2024",
       credential: "PML-C01",
       image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&q=80&w=400&h=300"
     },
     {
-      name: "TensorFlow Developer Certificate",
-      issuer: "TensorFlow",
-      year: "2022",
+      name: "Build Real World Al Applications with Gemini and Imagen",
+      issuer: "Google Cloud",
+      year: "2025",
       credential: "TF-DEV",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=400&h=300"
-    },
-    {
-      name: "Microsoft Azure AI Engineer",
-      issuer: "Microsoft",
-      year: "2023",
-      credential: "AI-102",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400&h=300"
+      image: "https://cdn.qwiklabs.com/RQhZyhu6J%2FB6MoY2p4wAb4HWxjAuBOsmG71ZtUW9hUQ%3D"
     }
+    // {
+    //   name: "Microsoft Azure AI Engineer",
+    //   issuer: "Microsoft",
+    //   year: "2023",
+    //   credential: "AI-102",
+    //   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400&h=300"
+    // }
   ];
 
   return (
@@ -89,58 +89,22 @@ export default function About() {
             {/* Scattered Images Layout */}
             <div className="relative h-96 mb-12">
               {/* Image 1 - Top Left */}
-              <div className="absolute top-0 left-0 w-48 h-36 transform -rotate-3 hover:rotate-0 transition-transform duration-500 hover:scale-105 hover:z-20">
+              <div className="absolute top-0 left-0 w-21 transform rotate-0 hover:rotate-0 transition-transform duration-500 hover:scale-105 hover:z-20">
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 rounded-2xl opacity-20 blur-sm animate-pulse"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
                   <img
-                    src="/hero.jpg"
+                    src="/self.jpg"
                     alt="AI Research 1"
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
               
-              {/* Image 2 - Top Right */}
-              <div className="absolute top-4 right-4 w-44 h-32 transform rotate-6 hover:rotate-2 transition-transform duration-500 hover:scale-105 hover:z-20">
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '1s'}}></div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
-                  <img
-                    src="/hero.jpg"
-                    alt="AI Research 2"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              
-              {/* Image 3 - Bottom Left */}
-              <div className="absolute bottom-4 left-8 w-40 h-30 transform rotate-2 hover:-rotate-1 transition-transform duration-500 hover:scale-105 hover:z-20">
-                <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '2s'}}></div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
-                  <img
-                    src="/hero.jpg"
-                    alt="AI Research 3"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              
-              {/* Image 4 - Bottom Right */}
-              <div className="absolute bottom-8 right-8 w-40 h-30 transform rotate-2 hover:-rotate-1 transition-transform duration-500 hover:scale-105 hover:z-20">
-                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 rounded-2xl opacity-20 blur-sm animate-pulse" style={{animationDelay: '3s'}}></div>
-                <div className="relative rounded-2xl overflow-hidden shadow-xl h-full">
-                  <img
-                    src="/hero.jpg"
-                    alt="AI Research 4"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              
               {/* Floating particles scattered around */}
-              <div className="absolute top-20 left-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '0s'}}></div>
+              {/* <div className="absolute top-20 left-1/3 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '0s'}}></div>
               <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-50 animate-bounce" style={{animationDelay: '1.5s'}}></div>
               <div className="absolute bottom-32 left-1/2 w-1 h-1 bg-blue-400 rounded-full opacity-70 animate-bounce" style={{animationDelay: '3s'}}></div>
-              <div className="absolute top-1/3 left-1/2 w-1.5 h-1.5 bg-teal-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '4s'}}></div>
+              <div className="absolute top-1/3 left-1/2 w-1.5 h-1.5 bg-teal-400 rounded-full opacity-60 animate-bounce" style={{animationDelay: '4s'}}></div> */}
             </div>
             
             {/* Enhanced Stats Cards */}
@@ -188,7 +152,7 @@ export default function About() {
         </div>
         
         {/* Certifications Section */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
               <Award className="w-6 h-6 text-primary mr-2" />
@@ -233,7 +197,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
