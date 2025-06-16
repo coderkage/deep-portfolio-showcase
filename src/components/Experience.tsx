@@ -111,7 +111,7 @@ export default function Experience() {
               <div className="hidden md:flex md:order-1 justify-start items-center">
                 <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20 backdrop-blur-lg bg-card/20">
                   <CalendarDays className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium">May 2023 - July 2023</span>
+                  <span className="text-sm font-medium">May 2024 - July 2024</span>
                 </div>
               </div>
               
