@@ -64,7 +64,7 @@ export default function Experience() {
                     
                     <div className="md:hidden flex items-center text-sm text-muted-foreground">
                       <CalendarDays className="w-4 h-4 mr-1" />
-                      <span>Jan - May 2023</span>
+                      <span>Aug 2024 - May 2023</span>
                     </div>
                   </div>
                   
@@ -111,7 +111,7 @@ export default function Experience() {
               <div className="hidden md:flex md:order-1 justify-start items-center">
                 <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20 backdrop-blur-lg bg-card/20">
                   <CalendarDays className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium">May 2023 - August 2023</span>
+                  <span className="text-sm font-medium">May 2023 - July 2023</span>
                 </div>
               </div>
               
@@ -137,12 +137,12 @@ export default function Experience() {
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="flex items-center text-sm text-muted-foreground">
                       <MapPin className="w-4 h-4 mr-1" />
-                      <span>Remote</span>
+                      <span>Ahmedabad, Gujarat</span>
                     </div>
                     
                     <div className="md:hidden flex items-center text-sm text-muted-foreground">
                       <CalendarDays className="w-4 h-4 mr-1" />
-                      <span>May - Jul 2024</span>
+                      <span>May 2024 - Jul 2024</span>
                     </div>
                   </div>
                   
