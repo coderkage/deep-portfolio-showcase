@@ -38,7 +38,7 @@ export default function About() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Side - Photo */}
           <div className="animate-scale-in group">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden border-4 border-background">
@@ -89,7 +89,7 @@ export default function About() {
         </div>
         
         {/* Stats Cards - positioned to align with photo width */}
-        <div className="grid grid-cols-3 gap-6 max-w-md">
+        <div className="grid grid-cols-3 gap-6 max-w-md mt-8">
           {/* Card 1 */}
           <div className="group relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
