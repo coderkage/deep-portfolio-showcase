@@ -1,4 +1,3 @@
-
 import { GraduationCap, Award, Book } from "lucide-react";
 
 export default function About() {
@@ -41,8 +40,8 @@ export default function About() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Left Side - Photo */}
-          <div className="relative animate-scale-in group">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden border-4 border-background relative z-10">
+          <div className="animate-scale-in group">
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden border-4 border-background">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/20 opacity-60 mix-blend-overlay z-10"></div>
               <img
                 src="/self.jpg"
@@ -50,10 +49,6 @@ export default function About() {
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            
-            {/* Background Design Elements */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full rounded-3xl bg-gradient-to-r from-primary/10 to-accent/10 -z-10 animate-[float_5s_ease-in-out_infinite_0.5s]"></div>
-            <div className="absolute -top-2 -left-2 w-24 h-24 rounded-full bg-gradient-to-r from-accent/15 to-primary/15 -z-10 animate-[float_4s_ease-in-out_infinite_1s]"></div>
           </div>
           
           {/* Right Side - Bio */}
