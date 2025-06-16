@@ -27,9 +27,9 @@ export default function Skills() {
       category: "Programming Languages",
       skills: [
         { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
         { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
         { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+        { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
         { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
       ]
     },
@@ -47,10 +47,12 @@ export default function Skills() {
     {
       category: "Web Development",
       skills: [
+        { name: "HTML", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" },
+        { name: "CSS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" },
         { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { name: "Flask", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
-        { name: "FastAPI", logo: "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" },
-        { name: "Streamlit", logo: "https://streamlit.io/images/brand/streamlit-mark-color.svg" }
+        { name: "Streamlit", logo: "https://streamlit.io/images/brand/streamlit-mark-color.svg" },
+        { name: "Flask", logo: "https://miro.medium.com/v2/resize:fit:980/1*cWuvkF15QKOsTHtgyIaqOA.png" },
+        { name: "FastAPI", logo: "https://www.cdnlogo.com/logos/f/59/fastapi.svg" }
       ]
     },
     {

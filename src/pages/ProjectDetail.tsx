@@ -42,7 +42,7 @@ export default function ProjectDetail() {
       "The framework employs advanced machine learning algorithms including Named Entity Recognition (NER), Aspect-Based Sentiment Analysis (ABSA), and Topic Modeling using Latent Dirichlet Allocation (LDA). It analyzes tweets from major earthquake events including Haiti 2010, Mexico 2017, Iraq-Iran 2017, Turkey 2023, and Japan 2024.",
       "By combining location extraction, sentiment analysis across 9 key aspects (Food, Injury, Shelter, Death, Property Damage, Rescue Efforts, Fear/Panic, Relief/Support, Government Response), and temporal visualization, RumbleRadar provides actionable insights for disaster management teams to prioritize emergency response efforts effectively."
     ],
-    image: "https://images.unsplash.com/photo-1593673953398-02b921f84fa0?auto=format&fit=crop&q=80",
+    image: "https://github.com/coderkage/RumbleRadar/raw/main/sev_map.png",
     date: "May 2024",
     role: "ML Research Engineer",
     technologies: ["Python", "spaCy", "VADER", "scikit-learn", "geopy", "Tweepy", "Jupyter Notebook", "LDA", "NER"],
@@ -64,22 +64,22 @@ export default function ProjectDetail() {
     ],
     links: {
       github: "https://github.com/coderkage/RumbleRadar",
-      demo: "https://github.com/coderkage/RumbleRadar"
+      demo: ""
     }
   },
   {
     id: "delta",
     title: "DELTA",
-    description: "DeepSeek Framework for Event-based Location Tracking",
+    description: "DeepSeek for Event-based Location Tracking and Analysis",
     fullDescription: [
       "DELTA (DeepSeek for Event-based Location Tracking and Analysis) is an advanced machine learning framework designed for spatial-temporal data processing and event analysis. The system combines deep learning techniques with geospatial analytics to track and analyze location-based events in real-time.",
-      "The framework utilizes state-of-the-art deep learning models to process complex spatial-temporal datasets, identifying patterns and anomalies in location-based events. It incorporates advanced feature extraction techniques and predictive modeling to forecast event trajectories and assess risk factors.",
-      "DELTA provides comprehensive analytics for event-based location intelligence, enabling organizations to make data-driven decisions for security, logistics, and emergency management applications through sophisticated pattern recognition and predictive capabilities."
+      "The framework utilizes state-of-the-art deep learning models to run model on local machine using Ollama, process complex spatial-temporal datasets, identifying patterns and anomalies in location-based events. It utilizes YouTube api, collects trending videos, summarizes their content, and converts into audio format for further analysis.",
+      "DELTA provides comprehensive analytics for event-based location intelligence and web platform, enabling organizations to make data-driven decisions for security, logistics, and emergency management applications through sophisticated pattern recognition and predictive capabilities."
     ],
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&q=80",
+    image: "https://github.com/coderkage/DELTA-DeepSeek-for-Event-based-Location-Tracking-and-Analysis/raw/main/img/architecture.png",
     date: "April 2025",
     role: "Deep Learning Engineer",
-    technologies: ["Python", "TensorFlow", "PyTorch", "GeoPandas", "Folium", "NumPy", "Pandas", "Scikit-learn"],
+    technologies: ["Python", "Ollama", "PyTorch", "Stremlit", "GeoPandas", "Folium", "NumPy", "Pandas", "Scikit-learn"],
     features: [
       "Deep learning-based spatial-temporal pattern recognition",
       "Real-time event tracking and location analysis",
@@ -98,7 +98,7 @@ export default function ProjectDetail() {
     ],
     links: {
       github: "https://github.com/coderkage/DELTA-DeepSeek-for-Event-based-Location-Tracking-and-Analysis",
-      demo: "https://github.com/coderkage/DELTA-DeepSeek-for-Event-based-Location-Tracking-and-Analysis"
+      demo: ""
     }
   },
   {
@@ -110,10 +110,10 @@ export default function ProjectDetail() {
       "The system employs natural language processing techniques to generate responses that authentically reflect Osaka's character, including her slow-paced thinking, unexpected insights, and endearing confusion. The bot maintains conversation context while staying true to the character's personality.",
       "Built with Python and leveraging modern NLP libraries, OsakaBot provides an entertaining and nostalgic experience for anime fans while demonstrating advanced character modeling and conversational AI techniques."
     ],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
+    image: "https://github.com/coderkage/OsakaBot/blob/main/img/Screenshot%202025-03-08%20022059.png?raw=true",
     date: "March 2025",
     role: "AI Developer",
-    technologies: ["Python", "NLTK", "spaCy", "Transformers", "Flask", "JSON", "Regular Expressions"],
+    technologies: ["LangChain", "Streamlit", "FAISS", "HuggingFace Transformers", "OpenRouter API", "Sentence Transformers"],
     features: [
       "Character-accurate personality modeling and response generation",
       "Context-aware conversation management",
@@ -131,7 +131,41 @@ export default function ProjectDetail() {
     ],
     links: {
       github: "https://github.com/coderkage/OsakaBot",
-      demo: "https://github.com/coderkage/OsakaBot"
+      demo: "https://osakabot.streamlit.app/"
+    }
+  },
+  {
+    id: "face-recognition",
+    title: "Face Recognition Based Attendance System",
+    description: "Computer Vision Application for Real-time Face Detection and Attendance Logging",
+   fullDescription: [
+    "This Face Recognition Attendance System is a real-time computer vision application that detects and recognizes faces using deep learning to automate attendance logging. It captures live video from a webcam (or screen) and matches faces against a set of pre-stored training images.",
+    "The system uses the `face_recognition` library built on deep learning models for highly accurate face encoding and comparison. It marks attendance in a CSV file with timestamps and avoids duplicate entries by updating existing records.",
+    "Built entirely with Python and OpenCV, the project showcases practical implementation of face recognition and real-time data logging, making it ideal for educational, security, and organizational use cases."
+  ],
+    image: "https://github.com/coderkage/Face-Recognition/raw/main/demo.png",
+    date: "April 2025",
+    role: "Deep Learning Engineer",
+    technologies: ["Python", "OpenCV", "face_recognition", "NumPy", "Pillow (ImageGrab)", "CSV"],
+    features: [
+      "Real-time face detection and recognition from webcam feed",
+      "Automatic attendance logging with timestamps in CSV format",
+      "Multi-face recognition in a single frame",
+      "Optimized face encoding and matching using `face_recognition` library",
+      "Automatic handling of duplicate entries with update capability",
+      "Easy extensibility for screen capture instead of webcam",
+      "Lightweight and fast performance using OpenCV and NumPy"
+    ],
+    challenges: [
+      "Handling false positives and inaccurate face matches in varying lighting",
+      "Managing performance bottlenecks during real-time recognition",
+      "Ensuring accurate face encoding from limited image data",
+      "Preventing duplicate attendance without full database integration",
+      "Improving robustness across diverse face angles and occlusions"
+    ],
+    links: {
+      github: "https://github.com/coderkage/Face-Recognition",
+      demo: ""
     }
   },
   {
@@ -143,7 +177,7 @@ export default function ProjectDetail() {
       "The application features multiple artistic filters ranging from edge contour detection to stylistic transformations, all processed in real-time using OpenCV. Users can apply various effects including sketch-like drawings, artistic renderings, and custom visual filters.",
       "Built with Python and OpenCV, the system demonstrates proficiency in computer vision techniques while providing an interactive and entertaining user experience with smooth real-time performance."
     ],
-    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&q=80",
+    image: "https://gamingcareers.com/wp-content/uploads/2023/04/Make-Your-Webcam-Look-Cinematic-2.jpg",
     date: "May 2024",
     role: "Computer Vision Developer",
     technologies: ["Python", "OpenCV", "NumPy", "Matplotlib", "Jupyter Notebook", "Image Processing"],
@@ -165,7 +199,7 @@ export default function ProjectDetail() {
     ],
     links: {
       github: "https://github.com/coderkage/webcam-artistic-filters",
-      demo: "https://github.com/coderkage/webcam-artistic-filters"
+      demo: ""
     }
   },
   {
@@ -173,88 +207,89 @@ export default function ProjectDetail() {
     title: "pyClassify",
     description: "Automated Machine Learning Classification Tool",
     fullDescription: [
-      "pyClassify is a comprehensive automated machine learning tool specifically designed for classification problems. The system streamlines the entire ML pipeline from data preprocessing to model evaluation, making machine learning accessible to users with varying levels of expertise.",
-      "The framework incorporates multiple classification algorithms including Random Forest, SVM, Gradient Boosting, and Neural Networks, with automated hyperparameter tuning and cross-validation. It features intelligent data preprocessing, feature selection, and model comparison capabilities.",
-      "Built with a focus on automation and ease of use, pyClassify provides detailed model performance metrics, visualization tools, and export capabilities, enabling users to quickly prototype and deploy classification solutions."
+      "This project implements a modular and automated machine learning pipeline for classification tasks. Each component of the pipeline is decoupled into individual scripts that handle preprocessing, normalization, feature selection, model training, cross-validation, and evaluation.",
+      "The main script acts as an orchestrator, accepting user inputs and executing the appropriate modules sequentially to ensure a seamless end-to-end workflow.",
+      "The pipeline is designed for flexibility and reproducibility, supporting various classification algorithms and preprocessing techniques. It also generates visual performance reports such as heatmaps and accuracy plots in a final PDF output."
     ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
+    image: "https://makeshiftinsights.com/wp-content/uploads/2019/10/iris_scatter_matrix_qtj7jm.png",
     date: "July 2024",
     role: "ML Engineer",
-    technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "XGBoost", "GridSearchCV"],
+    technologies: ["Python","NumPy", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn", "PDF generation(fpdf)", "CSV"],
     features: [
-      "Automated data preprocessing and feature engineering",
-      "Multiple classification algorithm implementations",
-      "Hyperparameter tuning with grid search and random search",
-      "Cross-validation and model performance evaluation",
-      "Feature importance analysis and selection",
-      "Model comparison and recommendation system",
-      "Comprehensive visualization and reporting tools",
-      "Export functionality for trained models"
+      "Modular design with separate scripts for each ML pipeline stage",
+      "Supports multiple normalization and feature selection techniques",
+      "Cross-validation with customizable number of folds",
+      "Flexible model training using user-specified classification algorithms",
+      "Evaluation on a blind test set with metric reporting",
+      "Automated PDF generation with visualizations (heatmaps, plots)",
+      "CLI-driven user interaction for full pipeline customization"
     ],
     challenges: [
-      "Creating a flexible framework supporting multiple ML algorithms",
-      "Implementing robust automated preprocessing for diverse datasets",
-      "Designing efficient hyperparameter optimization strategies",
-      "Building comprehensive evaluation and comparison metrics",
-      "Ensuring scalability for large datasets and complex models"
+      "Ensuring modular components interact seamlessly during execution",
+      "Designing flexible user input handling across all scripts",
+      "Managing pipeline dependencies and intermediate file formats",
+      "Balancing generalization vs. overfitting during model training",
+      "Generating clear and interpretable visualizations for evaluation"
     ],
     links: {
       github: "https://github.com/coderkage/pyClassify",
-      demo: "https://github.com/coderkage/pyClassify"
+      demo: ""
     }
   },
-  {
-    id: "qrclassify",
-    title: "QR Code Counterfeit Detection",
-    description: "Advanced QR Code Security and Authentication System",
-    fullDescription: [
-      "QR Code Counterfeit Detection is a sophisticated security system designed to identify and prevent QR code counterfeiting through advanced machine learning and computer vision techniques. The system analyzes QR code patterns, structures, and authenticity markers to detect fraudulent codes.",
-      "The framework employs deep learning models trained on legitimate and counterfeit QR code datasets, utilizing pattern recognition algorithms to identify subtle differences that indicate tampering or forgery. It includes real-time scanning capabilities and comprehensive security assessment features.",
-      "Built for security-critical applications, the system provides detailed analysis reports, confidence scores, and integration capabilities for existing security infrastructure, helping organizations protect against QR code-based fraud and security threats."
-    ],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&q=80",
-    date: "June 2025",
-    role: "Security Research Engineer",
-    technologies: ["Python", "OpenCV", "TensorFlow", "PIL", "NumPy", "Jupyter Notebook", "Image Processing", "Pattern Recognition"],
-    features: [
-      "Advanced QR code pattern analysis and verification",
-      "Machine learning-based counterfeit detection algorithms",
-      "Real-time scanning and authentication capabilities",
-      "Comprehensive security assessment and reporting",
-      "Integration APIs for existing security systems",
-      "Detailed forensic analysis of QR code structures",
-      "Multi-format QR code support and validation",
-      "Confidence scoring and risk assessment"
-    ],
-    challenges: [
-      "Developing robust detection algorithms for sophisticated forgeries",
-      "Training models on diverse counterfeit QR code samples",
-      "Achieving high accuracy while minimizing false positives",
-      "Implementing real-time processing for security applications",
-      "Creating comprehensive testing frameworks for security validation"
-    ],
-    links: {
-      github: "https://github.com/coderkage/QRCode-Counterfeit-Detection",
-      demo: "https://github.com/coderkage/QRCode-Counterfeit-Detection"
-    }
-  },
+{
+  id: "qr-cdp-forgery-detection",
+  title: "QR Code Forgery Detection using ML & Deep Learning",
+  description: "Forgery detection in printed QR codes using classical ML, CNN, and transfer learning on CDP features",
+  fullDescription: [
+    "This project addresses the problem of detecting forged (second print) QR codes by analyzing Copy Detection Pattern (CDP) degradation through classical machine learning and deep learning techniques.",
+    "A dataset of 200 QR code images, equally divided between original and counterfeit prints, was analyzed for structural differences using histogram peaks, entropy, edge sharpness, blur levels, and other handcrafted features. Models such as SVM, Random Forest, k-NN, XGBoost, and Decision Tree were evaluated using multiple metrics.",
+    "Additionally, deep learning models including a Feedforward Neural Network (FFNN), CNN, and a fine-tuned ResNet-18 architecture were implemented to extract spatial and pixel-level features directly from the images. ResNet-18 achieved perfect classification accuracy (100%) on the validation set.",
+    "The final pipeline integrates both feature-engineered and image-based models to ensure high performance in counterfeit detection, with future deployment potential in secure and real-time anti-counterfeiting systems."
+  ],
+  date: "June 2024",
+  role: "Researcher & ML Engineer",
+  image: "/feature.png", 
+  technologies: ["Scikit-learn", "OpenCV", "PyTorch", "ResNet18", "t-SNE", "Matplotlib", "Feature Engineering"],
+  features: [
+    "Histogram and peak analysis for visual feature extraction",
+    "10+ handcrafted features capturing blur, noise, and edge characteristics",
+    "SVM, k-NN, Random Forest, and XGBoost-based classification",
+    "Fully connected and convolutional neural network architectures",
+    "Transfer learning with fine-tuned ResNet-18",
+    "t-SNE visualization of feature separability",
+    "Comprehensive evaluation using accuracy, precision, recall, and F1-score",
+    "Deployment considerations for real-world security systems"
+  ],
+  challenges: [
+    "Distinguishing between reprinted and original QR codes with subtle pixel differences",
+    "Designing handcrafted features sensitive to CDP degradation",
+    "Training deep learning models on a small dataset (200 samples)",
+    "Evaluating performance using balanced metrics and visual diagnostics",
+    "Ensuring generalization across varying print quality and distortions"
+  ],
+  links: {
+    github: "https://github.com/coderkage/QRCode-Counterfeit-Detection",
+    demo: ""
+  }
+}
+,
   {
     id: "mess-management",
     title: "IIITR Mess Management System",
     description: "Comprehensive Hostel Mess Management Platform",
     fullDescription: [
-      "IIITR Mess Management System is a comprehensive web-based platform designed specifically for managing hostel mess operations at IIIT Ranchi. The system streamlines meal planning, inventory management, billing, and student services through an integrated digital solution.",
-      "The platform features separate interfaces for students, mess staff, and administrators, providing role-based access control and functionality. It includes meal booking systems, menu management, inventory tracking, billing automation, and detailed reporting capabilities.",
-      "Built with PHP and featuring a robust database architecture, the system has significantly improved operational efficiency and student satisfaction by digitizing previously manual processes and providing transparent, accessible mess management services."
+      "This project is a full-stack Mess Management System developed using PHP, MySQL, HTML, CSS, and JavaScript. It is designed to streamline daily mess operations including meal bookings, user complaints, billing, and feedback management.",
+      "The system features robust role-based authentication to distinguish between students, administrators, and staff. Students can book meals, provide feedback, and raise complaints, while administrators can manage menus, handle complaints, analyze usage patterns, and generate detailed reports.",
+      "The application includes a responsive interface built with Bootstrap for seamless usability across devices and ensures secure session management for reliable user interactions."
     ],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80",
+    image: "https://github.com/coderkage/IIITR-Mess-Management-System/blob/main/demo.png?raw=true",
     date: "December 2023",
     role: "Full-Stack Developer",
-    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap", "AJAX", "Session Management"],
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap", "XAMPP", "Session Management"],
     features: [
       "Role-based user authentication and access control",
       "Meal booking and menu management system",
-      "Inventory tracking and procurement management",
+      "Complaint filing, viewing, commenting, and resolving",
       "Automated billing and payment processing",
       "Student feedback and rating system",
       "Administrative dashboard with analytics",
@@ -270,7 +305,42 @@ export default function ProjectDetail() {
     ],
     links: {
       github: "https://github.com/coderkage/IIITR-Mess-Management-System",
-      demo: "https://github.com/coderkage/IIITR-Mess-Management-System"
+      demo: ""
+    }
+  },
+  {
+    id: "mrcf-website",
+    title: "MRCF Website",
+    description: "Responsive NGO Website for Rural Development Outreach",
+    fullDescription: [
+      "This project involved designing and developing the official website for the Motibhai R. Chaudhary Foundation, a nonprofit organization focused on rural development and social welfare in Gujarat, India.",
+      "The website presents the foundation’s mission, ongoing initiatives, disaster relief efforts, and healthcare programs in a clean, responsive layout. Built with modern web technologies, it serves as an outreach and information platform for both donors and beneficiaries.",
+      "The goal was to create a minimalistic yet impactful design with an intuitive user experience, optimized for accessibility across devices, and structured for content scalability as the organization grows."
+    ],
+    image: "/mrcf.png",
+    date: "December 2023",
+    role: "Front End Developer",
+    technologies: ["ReactJS", "HTML", "CSS", "JavaScript", "Bootstrap", "Responsive Web Design", "Web Hosting"],
+    features: [
+      "Fully responsive and mobile-friendly design",
+      "Informational pages highlighting programs, history, and impact",
+      "Gallery section showcasing fieldwork and events",
+      "Contact and feedback form with email forwarding",
+      "Integrated donation and support channels",
+      "Accessible layout optimized for all user groups",
+      "SEO-optimized metadata and page structure",
+      "Cross-browser compatibility and fast load time"
+    ],
+    challenges: [
+      "Translating organizational values into a clean digital interface",
+      "Ensuring compatibility across low-end devices in rural areas",
+      "Optimizing image and content load speeds for slow networks",
+      "Structuring content to accommodate non-technical users",
+      "Designing intuitive UX for stakeholders of all age groups"
+    ],
+    links: {
+      github: "",
+      demo: "https://motibhaifoundation.org/"
     }
   },
   {
@@ -285,61 +355,96 @@ export default function ProjectDetail() {
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80",
     date: "May 2024",
     role: "Full-Stack Developer",
-    technologies: ["Python", "Flask/Django", "SQLAlchemy", "HTML", "CSS", "JavaScript", "Chart.js", "Bootstrap"],
-    features: [
-      "Comprehensive 75-day challenge tracking system",
-      "Gamified achievement and badge system",
-      "Progress visualization with charts and analytics",
-      "Social features and community challenges",
-      "Customizable goals and habit tracking",
-      "Mobile-responsive design for daily use",
-      "Progress sharing and social accountability",
-      "Detailed statistics and performance insights"
-    ],
-    challenges: [
-      "Creating engaging gamification mechanics for long-term motivation",
-      "Designing intuitive daily tracking interfaces",
-      "Implementing reliable progress persistence and data integrity",
-      "Building social features that encourage positive competition",
-      "Optimizing user experience for consistent daily engagement"
-    ],
+      technologies: ["Python", "Streamlit", "Pandas", "Datetime", "HTML/CSS", "JavaScript (DOM Injection)", "CSV File Handling"],
+      features: [
+        "Gamified 75-day challenge tracking for multiple users",
+        "Daily submission system with timestamp validation",
+        "Automatic streak detection and leaderboard display",
+        "Editable task history with CSV download support",
+        "Custom dark mode adaptation via injected JavaScript",
+        "Dynamic circular streak progress indicators with SVG",
+        "Sticky footer, styled sidebar, and GitHub link integration",
+        "Responsive UI built with Streamlit’s component system"
+      ],
+      challenges: [
+        "Ensuring correct streak computation despite late or skipped submissions",
+        "Handling per-user data persistence using local CSV files",
+        "Injecting JavaScript and HTML for UI enhancements inside Streamlit",
+        "Implementing intuitive UX with visual streak feedback",
+        "Maintaining code modularity despite Streamlit’s script-style flow"
+      ],
     links: {
       github: "https://github.com/coderkage/track75",
-      demo: "https://github.com/coderkage/track75"
+      demo: ""
     }
   },
   {
+  id: "hybrid-qnn",
+  title: "Hybrid Quantum Neural Networks for Function Approximation and Classification",
+  description: "Exploring Hybrid QNNs with PyTorch and Qiskit for solving classification and regression tasks",
+  fullDescription: [
+    "This project presents an in-depth study of Hybrid Quantum Neural Networks (QNNs) that combine classical deep learning with quantum computing principles to perform supervised learning tasks such as classification and regression.",
+    "Implemented using Qiskit’s Torch Connector, the project bridges parameterized quantum circuits with PyTorch workflows, enabling classical optimization of quantum parameters. It explores EstimatorQNN and SamplerQNN variants and compares their performance on synthetic 2D datasets.",
+    "The project demonstrates that Sampler QNNs outperform Estimator QNNs in classification accuracy across datasets like Moons, Circles, and Blobs, while Estimator QNNs provide excellent regression performance for smooth functions like Sin and Cos.",
+    "This hybrid architecture not only shows potential for quantum advantage in low-data regimes but also lays the foundation for scaling up QNNs through classical-quantum hybrid optimization techniques, highlighting opportunities and limitations in real-world deployment."
+  ],
+  date: "June 2024",
+  role: "Quantum ML Researcher",
+  image: "https://qiskit-community.github.io/qiskit-machine-learning/_images/tutorials_10_effective_dimension_6_0.png",  // Replace with actual image path
+  technologies: ["Qiskit", "Qiskit Machine Learning", "TorchConnector", "Quantum Circuits", "EstimatorQNN", "SamplerQNN"],
+  features: [
+    "Design and simulation of Hybrid Quantum Neural Networks",
+    "Implementation of Estimator QNNs and Sampler QNNs",
+    "Integration of quantum models into PyTorch via Qiskit's TorchConnector",
+    "Function approximation using QNNs on datasets like Sin, Cos, Exp, and Tan",
+    "Binary classification on synthetic datasets with quantum parity and probability-based models",
+    "Use of parameterized quantum circuits with RealAmplitudes ansatz",
+    "Training using classical optimizers such as L-BFGS and loss functions like MSE and CrossEntropy"
+  ],
+  challenges: [
+    "Encoding classical data into quantum states using feature maps and ansatz",
+    "Training quantum circuits with classical optimizers on small datasets",
+    "Modeling discontinuous or nonlinear functions (e.g., Tan, Floor) using Estimator QNNs",
+    "Choosing appropriate QNN type (Estimator vs. Sampler) for a given task",
+    "Evaluating hybrid quantum-classical models under hardware and simulation constraints"
+  ],
+  links: {
+    github: "https://github.com/coderkage/Hybrid-QNN",
+    demo: ""  
+  }
+},
+  {
     id: "circuits-algorithms",
-    title: "Quantum Computing Homework-3",
-    description: "Academic Quantum Algorithms Implementation",
+    title: "Quantum Circuits and Algorithms",
+    description: "Academic Quantum Algorithms Implementation and Circuit Design",
     fullDescription: [
-      "Quantum Computing Homework-3 is an academic project for the CS333 Quantum Computing course, focusing on the implementation and analysis of fundamental quantum algorithms. The project demonstrates practical applications of quantum computing principles using the Qiskit framework.",
-      "The implementation covers various quantum algorithms including quantum search algorithms, quantum cryptographic protocols, and quantum machine learning techniques. Each algorithm is thoroughly documented with theoretical background, implementation details, and performance analysis.",
-      "Built as a comprehensive learning resource, the project showcases quantum circuit design, quantum state manipulation, and algorithm optimization techniques, providing valuable insights into the practical aspects of quantum computing development."
+      "This project is a comprehensive exploration of foundational quantum computing concepts and algorithms implemented using Qiskit. It includes hands-on, interactive Jupyter notebooks that simulate quantum logic gates, multi-qubit systems, and standard quantum algorithms.",
+      "The repository features implementations of landmark quantum algorithms such as Deutsch–Jozsa, Grover’s Search, and Bernstein–Vazirani, along with demonstrations of state vector evolution, measurement behavior, and quantum randomness. Each notebook walks through circuit construction, simulation, visualization, and interpretation of results.",
+      "The project is educationally oriented, making it suitable for students and enthusiasts beginning their journey into quantum computing. It also demonstrates the use of IBM's quantum backend (via Qiskit) for real-world circuit execution, bridging theory with practice. Concepts like entanglement, interference, and quantum parallelism are made tangible through well-commented examples and visual outputs."
     ],
-    image: "https://images.unsplash.com/photo-1636953056323-9c09fdd74fa6?auto=format&fit=crop&q=80",
+    image: "https://www.researchgate.net/publication/355342607/figure/fig1/AS:1079520413130752@1634389131189/The-Grovers-algorithm-circuit.png",
     date: "November 2024",
     role: "Quantum Computing Researcher",
     technologies: ["Python", "Qiskit", "Jupyter Notebook", "NumPy", "Matplotlib", "Quantum Circuits"],
     features: [
-      "Implementation of fundamental quantum algorithms",
-      "Quantum circuit design and optimization",
-      "Comprehensive theoretical and practical documentation",
-      "Performance analysis and benchmarking",
-      "Interactive Jupyter notebook demonstrations",
-      "Quantum state visualization and analysis",
-      "Educational resources and learning materials"
+      "Implementation of standard quantum algorithms: Deutsch–Jozsa, Grover's algorithm, Bernstein–Vazirani, and more",
+      "Hands-on Jupyter notebooks demonstrating quantum gate behaviors and multi-qubit operations",
+      "Use of Qiskit to simulate and execute circuits on IBM Quantum backends",
+      "Visualization of quantum circuit structure and statevector outputs",
+      "Educational examples like quantum random walks and number swapping",
+      "Modular, annotated code ideal for learning quantum computing fundamentals",
+      "Step-by-step walkthroughs with explanations and code commentary"
     ],
     challenges: [
-      "Understanding and implementing complex quantum algorithms",
-      "Optimizing quantum circuits for limited quantum hardware",
-      "Creating clear educational documentation for quantum concepts",
-      "Debugging quantum algorithms with probabilistic outcomes",
-      "Balancing theoretical accuracy with practical implementation constraints"
+      "Translating theoretical quantum algorithms into executable Qiskit code",
+      "Managing state complexity and visualizing results for multi-qubit systems",
+      "Ensuring correctness of quantum gates in simulation vs real hardware",
+      "Optimizing circuit depth and gate count for efficient execution",
+      "Explaining abstract quantum principles clearly in a notebook format"
     ],
     links: {
-      github: "https://github.com/coderkage/Quantum-Computing-Homework-3",
-      demo: "https://github.com/coderkage/Quantum-Computing-Homework-3"
+      github: "https://github.com/coderkage/Quantum-Circuits-and-Algorithms",
+      demo: ""
     }
   },
   {
@@ -351,7 +456,7 @@ export default function ProjectDetail() {
       "The scraper employs advanced web scraping techniques to navigate complex web structures, handle dynamic content, and extract structured data from various political information sources. It includes data cleaning, validation, and export capabilities for further analysis.",
       "Built with Python and web scraping libraries, the tool demonstrates proficiency in data extraction, web automation, and political data analysis, providing valuable resources for researchers, journalists, and civic organizations studying electoral processes."
     ],
-    image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&q=80",
+    image: "https://pbs.twimg.com/media/GOGDmsPbgAApuyI?format=jpg&name=4096x4096",
     date: "September 2024",
     role: "Data Engineer",
     technologies: ["Python", "BeautifulSoup", "Requests", "Selenium", "Pandas", "CSV", "JSON", "Web Scraping"],
@@ -374,7 +479,7 @@ export default function ProjectDetail() {
     ],
     links: {
       github: "https://github.com/coderkage/Web-Scraper-MyNeta",
-      demo: "https://github.com/coderkage/Web-Scraper-MyNeta"
+      demo: ""
     }
   },
   {
@@ -386,7 +491,7 @@ export default function ProjectDetail() {
       "The implementation covers the complete JPEG compression pipeline including color space conversion, block-wise DCT transformation, quantization, entropy encoding, and decompression. It provides detailed analysis of compression ratios, quality metrics, and visual comparison tools.",
       "Built as both an educational resource and practical tool, the project showcases advanced MATLAB programming techniques while providing insights into the mathematical foundations of modern image compression standards used worldwide."
     ],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80",
+    image: "https://miro.medium.com/v2/resize:fit:1000/1*Oe9Rul4rOcBgx1aMqM7awA.png",
     date: "May 2024",
     role: "Signal Processing Engineer",
     technologies: ["MATLAB", "Image Processing Toolbox", "DCT", "Quantization", "Digital Signal Processing"],
@@ -409,7 +514,7 @@ export default function ProjectDetail() {
     ],
     links: {
       github: "https://github.com/coderkage/Image-Compression",
-      demo: "https://github.com/coderkage/Image-Compression"
+      demo: ""
     }
   }
 ];
@@ -486,25 +591,29 @@ export default function ProjectDetail() {
             <p className="text-xl text-muted-foreground mb-8">{project.description}</p>
             
             <div className="flex flex-wrap gap-4 items-center">
-              <a 
-                href={project.links.github} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="glass px-4 py-2 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center"
-              >
-                <Github className="w-4 h-4 mr-2" />
-                <span>View on GitHub</span>
-              </a>
-              
-              <a 
-                href={project.links.demo} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="glass px-4 py-2 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center"
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                <span>Live Demo</span>
-              </a>
+              {project.links.github && project.links.github.trim() !== "" && (
+                <a
+                  href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass px-4 py-2 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center"
+                >
+                  <Github className="w-4 h-4 mr-2" />
+                  <span>View on GitHub</span>
+                </a>
+              )}
+
+              {project.links.demo && project.links.demo.trim() !== "" && (
+                <a
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass px-4 py-2 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 inline-flex items-center"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  <span>Live Demo</span>
+                </a>
+              )}
             </div>
           </div>
           

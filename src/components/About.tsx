@@ -32,64 +32,25 @@ export default function About() {
           <span className="inline-block px-3 py-1 text-sm font-medium rounded-full glass mb-4 text-primary">
             About Me
           </span>
-          <h2 className="section-title">AI Engineer & <span className="gradient-text">Researcher</span></h2>
+          <h2 className="section-title">Software & AI Engineer | Applied Researcher</h2>
           <p className="section-subtitle mx-auto">
-            Passionate about leveraging AI to solve complex problems and drive innovation in the field of Natural Language Processing.
+            Passionate about leveraging AI to solve complex problems and drive innovation
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Side - Photo */}
           <div className="animate-scale-in group">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden border-4 border-background">
+            <div className="aspect-[1/1] rounded-3xl overflow-hidden border-4 border-background">
               <img
                 src="/self.jpg"
                 alt="Deep Patel"
                 className="w-full h-full object-cover object-center"
               />
             </div>
-          </div>
-          
-          {/* Right Side - Bio */}
-          <div className="space-y-6 animate-fade-in">
-            <p className="text-lg">
-              As an AI Engineer specializing in Natural Language Processing and Large Language Models, I'm deeply interested in developing scalable AI solutions that solve real-world problems with a focus on NLP, LLM fine-tuning, and RAG systems.
-            </p>
-            
-            <p className="text-lg">
-              My research interests lie at the intersection of Artificial Intelligence and Natural Language Processing, where I explore ways to make AI systems more robust, interpretable, and useful for practical applications.
-            </p>
-            
-            <div className="space-y-4 mt-8">
-              <div className="flex items-start space-x-3">
-                <GraduationCap className="w-5 h-5 text-primary shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium">B.Tech in Computer Science and Engineering</h4>
-                  <p className="text-muted-foreground">Indian Institute of Information Technology, Raichur</p>
-                </div>
-              </div>
+            <br />
+            <div className="grid grid-cols-3 gap-6 max-w-md mt-2">
               
-              <div className="flex items-start space-x-3">
-                <Award className="w-5 h-5 text-accent shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium">GATE AIR 512</h4>
-                  <p className="text-muted-foreground">Graduate Aptitude Test in Engineering</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <Book className="w-5 h-5 text-primary shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-medium">Research Focus</h4>
-                  <p className="text-muted-foreground">Artificial Intelligence & Natural Language Processing</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Stats Cards - positioned to align with photo width */}
-        <div className="grid grid-cols-3 gap-6 max-w-md mt-2">
           {/* Card 1 */}
           <div className="group relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
@@ -129,6 +90,49 @@ export default function About() {
             </div>
           </div>
         </div>
+          </div>
+          
+          {/* Right Side - Bio */}
+          <div className="space-y-6 animate-fade-in">
+            <p>
+              I am a Computer Science graduate with a focus on designing systems that are intelligent, adaptable, and grounded in real-world application. My interests lie in the intersection of software development, applied machine learning, and research-driven problem solving.
+            </p>
+            <p>
+              I have worked on a wide range of projects, from building interactive platforms and automation tools to experimenting with models that learn from data. My approach combines technical depth with a strong sense of design and usability, always aiming to create solutions that are efficient and meaningful.
+            </p>
+            <p>
+              What drives me is the challenge of translating complex ideas into simple, functional systems. I enjoy working across disciplines, exploring new concepts, and continuously refining my ability to think clearly and build responsibly.
+            </p>
+            <div className="space-y-4 mt-8">
+              <div className="flex items-start space-x-3">
+                <GraduationCap className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-medium">B.Tech in Computer Science and Engineering</h4>
+                  <p className="text-muted-foreground">Indian Institute of Information Technology, Raichur</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <Award className="w-5 h-5 text-accent shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-medium">GATE AIR 512</h4>
+                  <p className="text-muted-foreground">Graduate Aptitude Test in Engineering</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <Book className="w-5 h-5 text-primary shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-medium">Research Focus</h4>
+                  <p className="text-muted-foreground">Artificial Intelligence & Natural Language Processing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Stats Cards - positioned to align with photo width */}
+        
       </div>
     </section>
   );

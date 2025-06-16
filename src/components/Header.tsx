@@ -29,9 +29,19 @@ export default function Header() {
 
   // Social Links
   const socialLinks = [
-    { name: "GitHub", href: "https://github.com/deeppatel234", icon: Github },
-    { name: "LinkedIn", href: "https://linkedin.com/in/deeppatel234", icon: Linkedin },
-    { name: "Kaggle", href: "https://kaggle.com/deeppatel234", icon: ExternalLink },
+    { name: "GitHub", href: "https://github.com/coderkage", icon: Github },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/deeppatel3910/", icon: Linkedin },
+     {
+    name: "Kaggle",
+    href: "https://www.kaggle.com/deeppatel03",
+    icon: () => (
+      <img
+        src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png"
+        alt="Kaggle"
+        className="w-5 h-5"
+      />
+    ),
+  },
   ];
 
   return (
