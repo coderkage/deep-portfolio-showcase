@@ -42,7 +42,6 @@ export default function About() {
           {/* Left Side - Photo */}
           <div className="animate-scale-in group">
             <div className="aspect-[4/3] rounded-3xl overflow-hidden border-4 border-background">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/20 opacity-60 mix-blend-overlay z-10"></div>
               <img
                 src="/self.jpg"
                 alt="Deep Patel"
