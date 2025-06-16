@@ -89,7 +89,7 @@ export default function About() {
         </div>
         
         {/* Stats Cards - positioned to align with photo width */}
-        <div className="grid grid-cols-3 gap-6 max-w-md mt-8">
+        <div className="grid grid-cols-3 gap-6 max-w-md mt-2">
           {/* Card 1 */}
           <div className="group relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 blur-sm"></div>
