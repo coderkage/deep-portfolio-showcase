@@ -22,6 +22,86 @@ export default function Experience() {
         <div className="relative">
           {/* Timeline Line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 via-primary to-primary/50"></div>
+          {/* Tarutium Global Consulting */}
+            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Timeline dot */}
+              <div className="absolute left-4 md:left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 shadow-lg border-2 border-background">
+                <div className="absolute inset-1 bg-primary/30 rounded-full animate-pulse"></div>
+              </div>
+              
+              {/* Date for large screens */}
+              <div className="hidden md:flex md:order-1 justify-start items-center">
+                <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20 backdrop-blur-lg bg-card/20">
+                  <CalendarDays className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-medium">Jul 2025 - Present</span>
+                </div>
+              </div>
+              
+              {/* Content */}
+              <div className="md:order-0 group relative">
+                {/* Consistent soft glow background */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                
+                <div className="relative ml-8 md:ml-0 md:mr-8 p-6 rounded-xl glass border border-border/50 group-hover:border-primary/30 transition-all duration-300 animate-fade-in hover:shadow-lg backdrop-blur-lg bg-card/30">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-primary/10 rounded-lg p-2">
+                        <Building className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">Data Science Intern</h3>
+                        <p className="text-muted-foreground">DEV Information Technology Limited</p>
+                      </div>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
+                  
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      <span>Ahmedabad, Gujarat</span>
+                    </div>
+                    
+                    <div className="md:hidden flex items-center text-sm text-muted-foreground">
+                      <CalendarDays className="w-4 h-4 mr-1" />
+                      <span>Jul 2025 - Present</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <p className="text-muted-foreground">
+                      Worked as a Data Science Intern on AI, NLP, and computer vision projects, leveraging Azure and Power BI to deliver data-driven solutions.
+                    </p>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Developed deep learning models for text analysis and image classification
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Built Power BI dashboards to visualize data and support business decisions
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Deployed machine learning workflows and services on Azure cloud
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        Collaborated with teams to integrate AI features into applications
+                      </li>
+                    </ul>
+                  </div>                  
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {["Data Collection", "NLP", "IoT", "Computer Application"].map((tech) => (
+                      <span key={tech} className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium border border-primary/20">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-8"></div>
           {/* Research Assistant */}
             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Timeline dot */}
@@ -111,7 +191,7 @@ export default function Experience() {
               <div className="hidden md:flex md:order-1 justify-start items-center">
                 <div className="glass px-4 py-2 rounded-full inline-flex items-center space-x-2 border border-primary/20 backdrop-blur-lg bg-card/20">
                   <CalendarDays className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium">May 2024 - July 2024</span>
+                  <span className="text-sm font-medium">May 2024 - Jul 2024</span>
                 </div>
               </div>
               
