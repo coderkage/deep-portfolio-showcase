@@ -49,7 +49,7 @@ export default function Experience() {
                         <Building className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold">Data Science Intern</h3>
+                        <h3 className="text-lg font-semibold">Data Engineer</h3>
                         <p className="text-muted-foreground">DEV Information Technology Limited</p>
                       </div>
                     </div>
